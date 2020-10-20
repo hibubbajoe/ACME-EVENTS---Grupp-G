@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
+
+body {
+  font-family: "Fjalla One";
+  margin: 0;
+  padding: 0;
+  background: #254441;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background: #fef9ef;
+}
+
+.menu ul {
+  display: inline-flex;
+  background: #fef9ef;
+}
+
+.menu ul li {
+  list-style: none;
+  margin: 0 40px;
+  color: black;
+  cursor: pointer;
+  padding-top: 30px;
+}
+
+.logo {
+  width: 30px;
+  margin-top: -7px;
+  margin-right: 50px;
+}
+
+.logo img {
+  width: 40px;
+  margin-top: -7px;
+  margin-right: 50px;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.banner {
+  width: 100%;
+  height: 600px;
+  color: #fff;
+  background: url(jpeg/people-event.jpg);
+  background-size: cover;
+}
+
+.app-text {
+  width: 100%;
+  float: left;
+}
+
+.app-text h1 {
+  font-size: 100px;
+  position: relative;
+  margin: 100px auto;
+  text-align: center;
+}
+
+.companies {
+  text-align: center;
+  background: white;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 15px;
+  list-style: none;
+}
+
+.wrapper strong {
+  font-size: 1.4em;
+}
+.wrapper span {
+  display: block;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  text-transform: capitalize;
+}
+
+.socialMedia {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 15px;
+  list-style: none;
+}
+.socialMedia img {
+  padding: 5px;
+}
+
+.socialMedia .skillshare {
+  width: 100px;
+}
+.socialMedia {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax 100px, 1rem);
+  grid-gap: 1rem;
+}
+
+.aboutUs {
+  text-align: center;
+  background: #ffcb77;
+}
