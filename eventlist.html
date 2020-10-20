@@ -1,88 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <link href='https://fonts.googleapis.com/css?family=Fjalla One' rel='stylesheet'>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+    <link rel="stylesheet" href="eventlist.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACME</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
-    <link href='https://fonts.googleapis.com/css?family=Fjalla One' rel='stylesheet'>
+    <title>Event List</title>
 </head>
-
 <body>
-
-    <div class="header">
-        <a href="frontpage.html">
-            <img src="jpeg/ACME-LOGO.png" id="logo" />
-        </a>
-
-        <div class="header-right">
-            <!--<a class="active" href="#home">Home</a>-->
-            <a href="#events">Events</a>
-            <a href="#about">About Us</a>
-        </div>
-    </div>
+    <div class="grid-container">
+        <nav>
+            <img src="jpeg/ACME-LOGO.png" alt="logo" class="logo">
 
 
-    <div class="frontpage-background">
-        <wrapper class="filter-buttons">
-
-            <form action="">
-                <select name="" id="" placeholder="Filter by category">
-                    <option value="hiphop">Filter by category</option>
-                    <option value="hiphop">hiphop</option>
-                    <option value="rock">rock</option>
-                    <option value="blues">blues</option>
-                    <option value="country">country</option>
-                </select>
-            </form>
-
-            <div class="test-list">
-                <li class="hiphop">hiphop</li>
-                <li class="rock">rock</li>
-                <li class="blues">blues</li>
-                <li class="country">country</li>
+            <div class="nav-buttons-wrapper">
+                <button class="nav-button">About</button>
+                <button class="nav-button">Events</button>
             </div>
-            <form action="">
-                <select name="" id="" placeholder="Filter by category">
-                    <option value="hiphop">Filter by category</option>
-                    <option value="hiphop">hiphop</option>
-                    <option value="rock">rock</option>
-                    <option value="blues">blues</option>
-                    <option value="country">country</option>
-                </select>
-            </form>
-
-            <div class="test-list">
-                <li class="hiphop">hiphop</li>
-                <li class="rock">rock</li>
-                <li class="blues">blues</li>
-                <li class="country">country</li>
-            </div>
-        </wrapper>
-
-
-
-
-        <div class="events">
-            <div class="event" id="event1"></div>
-            <div class="event" id="event2"></div>
-            <div class="event" id="event3"></div>
-            <div class="event" id="event4"></div>
-            <div class="event" id="event5"></div>
+        </nav>
+    <div class="filter">
+        <div>
+            <select name="category" id="category"></select>
         </div>
-
-
-
+        <div>
+            <button>Date</button>
+        </div>
+        
     </div>
-
-    <footer>
-
-    </footer>
-
-
-    <script src="eventlist.js"></script>
+    <main>
+        <table id="event-list">
+            <tr class="event-item">
+                <th>Date</th>
+                <th>Michael Jackson</th>
+                <th>Friends Arena</th>
+                <th>Button</th>
+            </tr>
+            <tr class="event-item">
+                <th>Date</th>
+                <th>TOTO</th>
+                <th>Kungshamnsvallen</th>
+                <th>Button</th>
+            </tr>
+            <tr class="event-item">
+                <th>Date</th>
+                <th>Lollapalooza Stockholm</th>
+                <th>Gärdet</th>
+                <th>Button</th>
+            </tr>
+            <tr class="event-item">
+                <th>Date</th>
+                <th>Chet Baker</th>
+                <th>Fasching</th>
+                <th>Button</th>
+            </tr>
+            
+        </table>
+    </main>
+</div>
 </body>
-
 </html>

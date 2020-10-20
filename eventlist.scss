@@ -1,0 +1,84 @@
+$background-color: #254441;
+$nav-color: #fef9ef;
+$yellow-color: #ffcb77;
+
+
+.grid-container{
+    background-color: $background-color;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 2fr 1fr 8fr;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: 
+    "nav nav nav"
+    "left filter right"
+    "left box right";
+
+    nav {
+        grid-area: nav; // namnet på dom grid-cellerna som elementet ska finnas på
+        display: grid;
+        grid-template-columns: 2fr 7fr 3fr;
+        grid-template-areas:
+            "logo-column space button-column";
+        background-color: #fef9ef;
+
+        .logo {
+            grid-area: logo-column;
+            max-height: 100px;
+            padding: 30px
+        }
+
+        .nav-buttons-wrapper {
+            grid-area: button-column;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-columns:
+                "left right";
+
+            .nav-button {
+                color: white;
+                place-self: center;
+                background-color: transparent;
+                border: none;
+                font-family: 'Pacifico', cursive;
+                color: black;
+                font-size: 30px;
+
+            }
+
+        }
+    }
+
+    .filter {
+        display: flex;
+        grid-area: filter;
+        padding: 1rem;
+        justify-content: flex-end;  
+    }
+    .filter > div {
+        padding: 0.3rem;
+        margin-top: 2rem;
+        background-color: $yellow-color;
+        border: 1px solid black;
+    }
+
+    }
+
+    main {
+        grid-area: box;
+        border: 1px solid black;
+        font-family: Fjalla One;
+
+        .event-list {
+            width: 500px;
+            
+        }
+
+        .event-item { // styling för varje list item 
+            background-color: $yellow-color;
+            text-align: center;
+            
+            
+            
+        }
+    }
