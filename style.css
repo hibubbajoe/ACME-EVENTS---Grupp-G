@@ -48,7 +48,8 @@ body {
 .frontpage-background {
     background-color: #254441;
     overflow: hidden;
-
+    display: grid;
+    align-content: center;
 }
 
 .wrapper {
@@ -58,9 +59,11 @@ body {
 }
 
 .events {
+    place-self: center;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 600px;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
 }
 
 img {

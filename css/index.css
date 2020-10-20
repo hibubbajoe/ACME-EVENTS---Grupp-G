@@ -1,0 +1,79 @@
+@charset "UTF-8";
+.grid-container {
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-columns: 1fr 2fr 1.5fr 2fr 1fr;
+  grid-template-areas: "nav-columns nav-columns nav-columns nav-columns nav-columns" "main-columns main-columns main-columns main-columns main-columns";
+}
+
+.grid-container nav {
+  grid-area: nav-columns;
+  background-color: #fef9ef;
+}
+
+.grid-container main {
+  grid-area: main-columns;
+  background-color: #254441;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1.5fr 2fr 1fr;
+  grid-template-rows: 100%;
+  grid-template-areas: "ett två tre fyra fem";
+}
+
+.grid-container main .eventcolumn1 {
+  grid-area: två;
+  background-color: blue;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid-container main .eventcolumn1 #box1 {
+  width: 100%;
+  height: 100%;
+  background-color: teal;
+  align-content: center;
+}
+
+.grid-container main .eventcolumn1 #box1 img {
+  width: 400px;
+  height: 400px;
+}
+
+.grid-container main .eventcolumn1 #box2 {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container main .eventcolumn1 #box2 img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container main .eventcolumn2 {
+  grid-area: fyra;
+  background-color: yellow;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.grid-container main .eventcolumn2 #box3 {
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.grid-container main .eventcolumn2 #box3 img {
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container main .eventcolumn2 #box4 {
+  width: 100%;
+  height: 100%;
+  background-color: royalblue;
+}
+
+.grid-container main .eventcolumn2 #box4 img {
+  width: 100%;
+  height: 100%;
+}
