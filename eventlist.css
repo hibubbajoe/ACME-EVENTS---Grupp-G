@@ -68,9 +68,20 @@
 
 .grid-container .filter > div {
   padding: 0.3rem;
-  margin-top: 2rem;
+  margin-top: 4rem;
+  margin-right: 1rem;
   background-color: #ffcb77;
-  border: 1px solid black;
+  border: 2px solid black;
+}
+
+.grid-container .filter > div button {
+  background-color: #ffcb77;
+  border: none;
+}
+
+.grid-container .filter > div select {
+  background-color: #ffcb77;
+  border: none;
 }
 
 main {

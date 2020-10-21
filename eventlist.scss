@@ -57,9 +57,19 @@ $yellow-color: #ffcb77;
     }
     .filter > div {
         padding: 0.3rem;
-        margin-top: 2rem;
+        margin-top: 4rem;
+        margin-right: 1rem;
         background-color: $yellow-color;
-        border: 1px solid black;
+        border: 2px solid black;
+
+        button{
+            background-color: $yellow-color;
+            border: none;
+        }
+        select {
+            background-color: $yellow-color;
+            border: none;
+        }
     }
 
     }

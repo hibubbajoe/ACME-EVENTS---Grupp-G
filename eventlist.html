@@ -21,10 +21,15 @@
         </nav>
     <div class="filter">
         <div>
-            <select name="category" id="category"></select>
+            <select name="category-menu"  id="category">
+                <option>Category</option>
+                <option value="">Music</option> <!--vad ska vi ha för options?-->
+                <option value="">Sport</option>
+                <option value="">Art</option>
+            </select>
         </div>
         <div>
-            <button>Date</button>
+            <button id="date-button">Date</button>
         </div>
         
     </div>
@@ -63,7 +68,7 @@
 
    -  skapa  inga event i html. 
     När sidan laddat ska eventobjekten skapas med js och visas i lista-boxen.
-    Alltså det finns några “färdiga objekt” från början.javascriptobject  läggs sedan till i listan på sidan. Samt sparas i local storage som JSON.
+    Alltså det finns några “färdiga objekt” från början som läggs sedan till i listan på sidan när den laddats. Samt sparas i local storage som JSON.
 ---------------------------------------
     (När man CRUDAR nya events sen ska de kunna använda sig av samma klass. )
 --------------------------------------
@@ -89,5 +94,6 @@
     Här ska det finnas ett formulär som endast visas när man trycker på admin. 
     Med detta kan man CRUDA nya evenemang till tablet-->
 </div>
+<script src="eventlist.js"></script>
 </body>
 </html>
