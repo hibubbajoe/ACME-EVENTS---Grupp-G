@@ -1,0 +1,194 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+.grid-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 0.2fr 4fr;
+      grid-template-rows: 0.2fr 4fr;
+  -ms-grid-columns: 1fr 2fr 1.5fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1.5fr 2fr 1fr;
+      grid-template-areas: "nav-columns nav-columns nav-columns nav-columns nav-columns" "main-columns main-columns main-columns main-columns main-columns";
+}
+
+.grid-container nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: nav-columns;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 7fr 3fr;
+      grid-template-columns: 2fr 7fr 3fr;
+      grid-template-areas: "logo-column space button-column";
+  background-color: #fef9ef;
+}
+
+.grid-container nav .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo-column;
+  max-height: 100px;
+  padding: 30px;
+}
+
+.grid-container nav .nav-buttons-wrapper {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button-column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: "left right";
+      grid-template-columns: "left right";
+}
+
+.grid-container nav .nav-buttons-wrapper .nav-button {
+  color: white;
+  place-self: center;
+  background-color: transparent;
+  border: none;
+  font-family: 'Pacifico', cursive;
+  color: black;
+  font-size: 30px;
+}
+
+.grid-container main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: main-columns;
+  background-color: #254441;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1.5fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1.5fr 2fr 1fr;
+  -ms-grid-rows: 1fr 6fr 1fr;
+      grid-template-rows: 1fr 6fr 1fr;
+      grid-template-areas: "header-text header-text header-text header-text header-text" "ett två tre fyra fem" "footer footer footer footer footer";
+}
+
+.grid-container main header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: header-text;
+  color: white;
+  place-self: center;
+}
+
+.grid-container main .eventcolumn1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: två;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "top" "bottom";
+  row-gap: 70px;
+}
+
+.grid-container main .eventcolumn1 #box1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: top;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.grid-container main .eventcolumn1 #box1 img {
+  width: 480px;
+  height: 480px;
+  border: 10px solid #FFCB77;
+}
+
+.grid-container main .eventcolumn1 #box2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: bottom;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container main .eventcolumn1 #box2 img {
+  width: 480px;
+  height: 480px;
+  border: 10px solid #FFCB77;
+}
+
+.grid-container main .eventcolumn2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 4;
+  grid-area: fyra;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "top" "bottom";
+  row-gap: 70px;
+}
+
+.grid-container main .eventcolumn2 #box3 {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container main .eventcolumn2 #box3 img {
+  width: 480px;
+  height: 480px;
+  border: 10px solid #FFCB77;
+}
+
+.grid-container main .eventcolumn2 #box4 {
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-container main .eventcolumn2 #box4 img {
+  width: 480px;
+  height: 480px;
+  border: 10px solid #FFCB77;
+}
+
+.grid-container main footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 5;
+  grid-area: footer;
+  display: -ms-grid;
+  display: grid;
+}
+
+.grid-container main footer button {
+  place-self: center;
+}
+/*# sourceMappingURL=index.css.map */

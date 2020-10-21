@@ -1,0 +1,92 @@
+.grid-container {
+  background-color: #254441;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 2fr 1fr 8fr;
+      grid-template-rows: 2fr 1fr 8fr;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas: "nav nav nav" "left filter right" "left box right";
+}
+
+.grid-container nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: nav;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 7fr 3fr;
+      grid-template-columns: 2fr 7fr 3fr;
+      grid-template-areas: "logo-column space button-column";
+  background-color: #fef9ef;
+}
+
+.grid-container nav .logo {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: logo-column;
+  max-height: 100px;
+  padding: 30px;
+}
+
+.grid-container nav .nav-buttons-wrapper {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: button-column;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: "left right";
+      grid-template-columns: "left right";
+}
+
+.grid-container nav .nav-buttons-wrapper .nav-button {
+  color: white;
+  place-self: center;
+  background-color: transparent;
+  border: none;
+  font-family: 'Pacifico', cursive;
+  color: black;
+  font-size: 30px;
+}
+
+.grid-container .filter {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: filter;
+  padding: 1rem;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.grid-container .filter > div {
+  padding: 0.3rem;
+  margin-top: 2rem;
+  background-color: #ffcb77;
+  border: 1px solid black;
+}
+
+main {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: box;
+  border: 1px solid black;
+  font-family: Fjalla One;
+}
+
+main .event-list {
+  width: 500px;
+}
+
+main .event-item {
+  background-color: #ffcb77;
+  text-align: center;
+}
+/*# sourceMappingURL=eventlist.css.map */
