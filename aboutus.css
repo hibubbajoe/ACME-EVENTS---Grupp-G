@@ -49,16 +49,29 @@ body {
   background-size: cover;
 }
 
-.app-text {
+.up-text {
   width: 100%;
   float: left;
 }
 
-.app-text h1 {
+.up-text h1 {
   font-size: 100px;
   position: relative;
   margin: 100px auto;
   text-align: center;
+  animation: fadeIn 5s ease 0.3s 1 normal;
+}
+
+@keyframes fadeIn {
+  /*animetion-nameで設定した値を書く*/
+
+  0% {
+    opacity: 0;
+  } /*アニメーション開始時は不透明度0%*/
+
+  100% {
+    opacity: 1;
+  } /*アニメーション終了時は不透明度100%*/
 }
 
 .companies {
