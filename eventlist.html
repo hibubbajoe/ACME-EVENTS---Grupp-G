@@ -31,32 +31,63 @@
     <main>
         <table id="event-list">
             <tr class="event-item">
-                <th>Date</th>
-                <th>Michael Jackson</th>
-                <th>Friends Arena</th>
-                <th>Button</th>
+                <td>Date</td>
+                <td>Michael Jackson</td>
+                <td>Friends Arena</td>
+                <td>Button</td>
             </tr>
             <tr class="event-item">
-                <th>Date</th>
-                <th>TOTO</th>
-                <th>Kungshamnsvallen</th>
-                <th>Button</th>
+                <td>Date</td>
+                <td>TOTO</td>
+                <td>Kungshamnsvallen</td>
+                <td>Button</td>
             </tr>
             <tr class="event-item">
-                <th>Date</th>
-                <th>Lollapalooza Stockholm</th>
-                <th>Gärdet</th>
-                <th>Button</th>
+                <td>Date</td>
+                <td>Lollapalooza Stockholm</td>
+                <td>Gärdet</td>
+                <td>Button</td>
             </tr>
             <tr class="event-item">
-                <th>Date</th>
-                <th>Chet Baker</th>
-                <th>Fasching</th>
-                <th>Button</th>
+                <td>Date</td>
+                <td>Chet Baker</td>
+                <td>Fasching</td>
+                <td>Button</td>
             </tr>
             
         </table>
     </main>
+
+
+    <!--TODO:
+
+   -  skapa  inga event i html. 
+    När sidan laddat ska eventobjekten skapas med js och visas i lista-boxen.
+    Alltså det finns några “färdiga objekt” från början.javascriptobject  läggs sedan till i listan på sidan. Samt sparas i local storage som JSON.
+---------------------------------------
+    (När man CRUDAR nya events sen ska de kunna använda sig av samma klass. )
+--------------------------------------
+    class Event 
+    constructor(datum, namn, plats, kategori, isAvaliable)
+    datum = this.datum
+    namn = this.namn
+    plats = this.plats
+    kategori= this.kategori
+    isAvaliable = this.isAvaliable
+
+    metod som skriver ut objektet i listan
+    metod som gör om objekt till JSON och  sparar data i local storage 
+-----------------------------------------
+
+    class eventList
+
+    metod som filtrarar ut en kategori som väljs av användaren i dropdownmenyn. 
+    metod som sorterar alla eventobjekt efter datum när användaren trycker på en knapp. 
+----------------------------------------
+
+    Det behöv en adminknapp
+    Här ska det finnas ett formulär som endast visas när man trycker på admin. 
+    Med detta kan man CRUDA nya evenemang till tablet-->
 </div>
 </body>
 </html>

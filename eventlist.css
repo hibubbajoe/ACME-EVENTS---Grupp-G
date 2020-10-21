@@ -77,16 +77,21 @@ main {
   -ms-grid-row: 3;
   -ms-grid-column: 2;
   grid-area: box;
-  border: 1px solid black;
   font-family: Fjalla One;
 }
 
-main .event-list {
-  width: 500px;
+main #event-list {
+  width: 100%;
+  border-collapse: collapse;
 }
 
 main .event-item {
   background-color: #ffcb77;
   text-align: center;
+  border: 3px solid black;
+}
+
+main .event-item td {
+  padding: 2rem;
 }
 /*# sourceMappingURL=eventlist.css.map */
