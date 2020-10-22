@@ -79,7 +79,6 @@ class EventList {
         } else {
         //loopa igenom alla object i local storage. om objektens egenskap "category" har samma värde som vald kategori så ska de filtreras ut med filterfunktion
         let event_obj = JSON.parse(localStorage.getItem("event_array"));
-
         let filtered_array = event_obj.filter((obj) => {
             return obj.category === this.filter_btn.options[this.filter_btn.selectedIndex].text;
         });
@@ -90,6 +89,7 @@ class EventList {
         let event_string = JSON.stringify(filtered_array);
         localStorage.setItem("filtered_array", event_string);
 
+        //skriv ut de filtrerade objekten
         let key = "filtered";
         this.printEvent(key);  
         }
