@@ -3,7 +3,10 @@
 class EventList {
     constructor(){
         this.eventArray = []; // array som ska innehålla alla eventobjekt. 
-        console.log(this.eventArray);
+        this.filter_btn = document.getElementById("category");
+        this.filter_btn.addEventListener("change", () => {
+            this.filter();
+        });
     }
 
     //lägger till eventet i den synliga listan och i arrayen.
@@ -20,10 +23,18 @@ class EventList {
         
     }
     //hämta data från local storage och skriv ut som lista
-    printEvent(){
+    printEvent(key){
 
-        let event_obj = JSON.parse(localStorage.getItem("event_array"));
-        console.log(event_obj);
+        let event_obj;
+
+        if(key === "filtered"){
+            this.clearTable();
+            event_obj = JSON.parse(localStorage.getItem("filtered_array"));
+        } else{
+            event_obj = JSON.parse(localStorage.getItem("event_array"));
+            console.log("Array med alla objekt:")
+            console.log(event_obj);
+        }
         
         let list = document.getElementById("event-list");
 
@@ -59,11 +70,32 @@ class EventList {
 
     // filtrerar ut event med valfri kategori
     filter(){
+        //loopa igenom alla object i local storage. om objektets egenskap category har samma värde som vald kategori så ska de filtreras ut med filterfunktion
+        let event_obj = JSON.parse(localStorage.getItem("event_array"));
+        let filtered_array = event_obj.filter((obj) => {
+            return obj.category === this.filter_btn.options[this.filter_btn.selectedIndex].text;
+        });
+        console.log("Array som filtrerats:");
+        console.log(filtered_array);
 
+        //spara till local storage
+        let event_string = JSON.stringify(filtered_array);
+        localStorage.setItem("filtered_array", event_string);
+
+        let key = "filtered";
+        this.printEvent(key);  
     }
+    
     //sortera listan i datum-ordning. 
     sort(){
 
+    }
+
+    clearTable(){
+        let events = document.querySelectorAll("tr");
+        events.forEach(function(event){
+            event.remove();
+        })
     }
 }
 
@@ -82,7 +114,7 @@ class Event {
 // Några Eventobjekt som ska finnas från början när sidan har laddats.
 let event1 = new Event(2, "sara", "stockholm", "sport", false)
 let event2 = new Event(8, "Shiho", "Nackademin", "music", true)
-let event3 = new Event(4, "Kweku", "Hemma", "Art", false)
+let event3 = new Event(4, "Kweku", "Hemma", "art", false)
 let event4 = new Event(5, "Robin", "Borta", "music", false)
 let eventlist = new EventList;
 eventlist.addEvent(event1);
