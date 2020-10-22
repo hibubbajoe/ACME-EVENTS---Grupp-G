@@ -8,7 +8,28 @@ class EventList {
 
     //lägger till eventet i den synliga listan och i arrayen.
     addEvent(event){
+
+        this.eventArray.push(event);
+        
+    }  
+    //  sparar array av eventobjekten i local storage 
+    storeEvent() {
+        
+        let event_string = JSON.stringify(this.eventArray);
+        localStorage.setItem("event_array", event_string);
+        
+    }
+    //hämta data från local storage och skriv ut som lista
+    printEvent(){
+
+        let event_obj = JSON.parse(localStorage.getItem("event_array"));
+        console.log(event_obj);
+
+        //loopa igenom array och skriv ut:
+        
         let list = document.getElementById("event-list");
+
+        for(event of event_obj){
         let row = document.createElement("tr");
         row.classList.add("event-item")
         let td_date = document.createElement("td");
@@ -24,17 +45,9 @@ class EventList {
         row.append(td_name);
         row.append(td_location);
         row.append(td_avaliable);
-
-        this.eventArray.push(event);
-        
-    }  
-    //  sparar array av eventobjecten i local storage med hjälp av JSON.stringify
-    storeEvent(event) {
-        
-        let event_string = JSON.stringify(this.eventArray);
-        localStorage.setItem("event_array", event_string);
-        
+        }
     }
+
     // filtrerar ut event med valfri kategori
     filter(){
 
@@ -72,6 +85,8 @@ eventlist.storeEvent(event1);
 eventlist.storeEvent(event2);
 eventlist.storeEvent(event3);
 eventlist.storeEvent(event4);
+
+eventlist.printEvent();
 
 
 
