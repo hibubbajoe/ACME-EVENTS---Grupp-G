@@ -9,7 +9,6 @@ class EventList {
         });
     }
 
-    //lägger till eventet i den synliga listan och i arrayen.
     addEvent(event){
 
         this.eventArray.push(event);
@@ -22,14 +21,16 @@ class EventList {
         localStorage.setItem("event_array", event_string);
         
     }
-    //hämta data från local storage och skriv ut som lista
+    //hämtar data från local storage och skriv ut som lista.
     printEvent(key){
 
         let event_obj;
-
+        //om den filtrerade listan ska skrivas ut tas nuvarande innehållet i listan bort, sedan hämtas "filtered_Array"
         if(key === "filtered"){
             this.clearTable();
             event_obj = JSON.parse(localStorage.getItem("filtered_array"));
+
+        //annars hämtas "event_array" och hela listan skrivs.
         } else{
             event_obj = JSON.parse(localStorage.getItem("event_array"));
             console.log("Array med alla objekt:")
@@ -68,10 +69,17 @@ class EventList {
         }
     }
 
-    // filtrerar ut event med valfri kategori
+    // filtrerar ut event med valfri kategori från dropdown-menyn.
     filter(){
-        //loopa igenom alla object i local storage. om objektets egenskap category har samma värde som vald kategori så ska de filtreras ut med filterfunktion
+
+        //om det är "category" som väljs ska alla skrivas ut igen
+        if(this.filter_btn.options[this.filter_btn.selectedIndex].text === "Category"){
+            this.clearTable();
+            this.printEvent();
+        } else {
+        //loopa igenom alla object i local storage. om objektens egenskap "category" har samma värde som vald kategori så ska de filtreras ut med filterfunktion
         let event_obj = JSON.parse(localStorage.getItem("event_array"));
+
         let filtered_array = event_obj.filter((obj) => {
             return obj.category === this.filter_btn.options[this.filter_btn.selectedIndex].text;
         });
@@ -84,8 +92,9 @@ class EventList {
 
         let key = "filtered";
         this.printEvent(key);  
+        }
     }
-    
+
     //sortera listan i datum-ordning. 
     sort(){
 
