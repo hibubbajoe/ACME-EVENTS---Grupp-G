@@ -105,4 +105,16 @@ main .event-item {
 main .event-item td {
   padding: 1.5rem;
 }
+
+main .event-item td button {
+  background-color: #17c3b2;
+  border: 2px solid black;
+  padding: 0.3rem;
+  -webkit-box-shadow: 2px 2px black;
+          box-shadow: 2px 2px black;
+}
+
+.cancelled {
+  color: #cf2a27;
+}
 /*# sourceMappingURL=eventlist.css.map */

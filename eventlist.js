@@ -2,7 +2,7 @@
 
 class EventList {
     constructor(){
-        this.eventArray = []; // array som ska innehålla alla eventobjekt. (Kanske inte kommer behövas?)
+        this.eventArray = []; // array som ska innehålla alla eventobjekt. 
         console.log(this.eventArray);
     }
 
@@ -24,27 +24,36 @@ class EventList {
 
         let event_obj = JSON.parse(localStorage.getItem("event_array"));
         console.log(event_obj);
-
-        //loopa igenom array och skriv ut:
         
         let list = document.getElementById("event-list");
 
         for(event of event_obj){
-        let row = document.createElement("tr");
-        row.classList.add("event-item")
-        let td_date = document.createElement("td");
-        let td_name = document.createElement("td");
-        let td_location = document.createElement("td");
-        let td_avaliable = document.createElement("td");
-        td_date.innerText = event.date;
-        td_name.innerText = event.name;
-        td_location.innerText = event.location;
-        td_avaliable.innerText = event.isAvaliable;
-        list.append(row);
-        row.append(td_date);
-        row.append(td_name);
-        row.append(td_location);
-        row.append(td_avaliable);
+            let row = document.createElement("tr");
+            row.classList.add("event-item")
+            let td_date = document.createElement("td");
+            let td_name = document.createElement("td");
+            let td_location = document.createElement("td");
+            let td_avaliable = document.createElement("td");
+            td_date.innerText = event.date;
+            td_name.innerText = event.name;
+            td_location.innerText = event.location;
+            
+            list.append(row);
+            row.append(td_date);
+            row.append(td_name);
+            row.append(td_location);
+
+            if(!event.isAvaliable){
+                td_avaliable.innerText = "cancelled"
+                td_avaliable.classList.add("cancelled");
+                row.append(td_avaliable);
+                //hämta class som gör texten röd
+            } else{
+                let more_info_btn = document.createElement("button");
+                more_info_btn.innerText = "More info";
+                td_avaliable.append(more_info_btn);
+                row.append(td_avaliable);
+            }
         }
     }
 
@@ -73,7 +82,7 @@ class Event {
 // Några Eventobjekt som ska finnas från början när sidan har laddats.
 let event1 = new Event(2, "sara", "stockholm", "sport", false)
 let event2 = new Event(8, "Shiho", "Nackademin", "music", true)
-let event3 = new Event(4, "Kweku", "Hemma", "Art", true)
+let event3 = new Event(4, "Kweku", "Hemma", "Art", false)
 let event4 = new Event(5, "Robin", "Borta", "music", false)
 let eventlist = new EventList;
 eventlist.addEvent(event1);
