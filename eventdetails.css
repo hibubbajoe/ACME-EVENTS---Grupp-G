@@ -91,8 +91,8 @@
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: 100% 0;
-     object-position: 100% 0;
+  -o-object-position: 70% 0;
+     object-position: 70% 0;
 }
 
 .grid-container main .event-short-info {
@@ -114,6 +114,7 @@
 }
 
 .grid-container main .event-short-info .event-short-info-span {
+  font-family: 'Fjalla One';
   padding: 10px;
   border: black 1px solid;
   width: 400px;
@@ -128,6 +129,7 @@
 }
 
 .grid-container main .event-short-info #book-here-button {
+  font-family: 'Fjalla One';
   font-size: 20px;
   margin-left: 5px;
   padding: 10px;
@@ -173,10 +175,12 @@
   border: 2px solid black;
   -webkit-box-shadow: 2px 2px black;
           box-shadow: 2px 2px black;
-  margin-top: -170px;
+  margin-top: -270px;
 }
 
 .grid-container main .message-us #message-input {
+  font-family: 'Fjalla One';
+  text-align: center;
   width: 210px;
   height: 25px;
   background-color: #fef9ef;
@@ -186,6 +190,7 @@
 }
 
 .grid-container main .message-us #submit-message {
+  font-family: 'Fjalla One';
   height: 30px;
   width: 72px;
   margin-left: 10px;
@@ -196,12 +201,11 @@
 }
 
 .grid-container main .email-list {
+  font-family: 'Fjalla One';
   -ms-grid-row: 2;
   -ms-grid-column: 3;
   grid-area: right;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -212,6 +216,7 @@
 }
 
 .grid-container main .email-list #email-input {
+  text-align: center;
   height: 25px;
   width: 170px;
   margin-left: 10px;
@@ -242,7 +247,8 @@
       align-content: center;
   width: 480px;
   row-gap: 70px;
-  margin: 120px 0px 20px 240px;
+  margin: 60px 0px 20px 240px;
   color: #fef9ef;
+  font-family: 'Fjalla One';
 }
 /*# sourceMappingURL=eventdetails.css.map */
