@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+.grid-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 0.2fr 4fr;
+    grid-template-rows: 0.2fr 4fr;
+    -ms-grid-columns: 1fr 2fr 1.5fr 2fr 1fr;
+    grid-template-columns: 1fr 2fr 1.5fr 2fr 1fr;
+    grid-template-areas: "nav-columns nav-columns nav-columns nav-columns nav-columns""main-columns main-columns main-columns main-columns main-columns";
+}
+
+.grid-container nav {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 5;
+    grid-area: nav-columns;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 2fr 7fr 3fr;
+    grid-template-columns: 2fr 7fr 3fr;
+    grid-template-areas: "logo-column space button-column";
+    background-color: #fef9ef;
+}
+
+.grid-container nav .logo {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: logo-column;
+    max-height: 100px;
+    padding: 30px;
+}
+
+.grid-container nav .nav-buttons-wrapper {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+    grid-area: button-column;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-columns: "left right";
+    grid-template-columns: "left right";
+}
+
+.grid-container nav .nav-buttons-wrapper .nav-button {
+    color: white;
+    place-self: center;
+    background-color: transparent;
+    border: none;
+    font-family: 'Pacifico', cursive;
+    color: black;
+    font-size: 30px;
+}
