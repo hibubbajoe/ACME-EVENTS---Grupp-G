@@ -4,16 +4,16 @@ $yellow-color: #ffcb77;
 $green-color: #17c3b2;
 
 
-.grid-container{
+.grid-container {
     background-color: $background-color;
     height: 100vh;
     display: grid;
     grid-template-rows: 2fr 1fr 8fr;
     grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: 
-    "nav nav nav"
-    "left filter right"
-    "left box right";
+    grid-template-areas:
+        "nav nav nav"
+        "left filter right"
+        "left box right";
 
     nav {
         grid-area: nav; // namnet på dom grid-cellerna som elementet ska finnas på
@@ -54,63 +54,66 @@ $green-color: #17c3b2;
         display: flex;
         grid-area: filter;
         padding: 1rem;
-        justify-content: flex-end;  
+        justify-content: flex-end;
     }
-    .filter > div {
+
+    .filter>div {
         padding: 0.3rem;
         margin-top: 4rem;
         margin-right: 1rem;
         background-color: $yellow-color;
         border: 3px solid black;
 
-        button{
+        button {
             background-color: $yellow-color;
             border: none;
         }
+
         select {
             background-color: $yellow-color;
             border: none;
         }
     }
 
+}
+
+main {
+    grid-area: box;
+    //border: 1px solid black;
+    font-family: Fjalla One;
+
+    #event-list {
+        width: 100%;
+        border-collapse: collapse;
+
     }
 
-    main {
-        grid-area: box;
-        //border: 1px solid black;
-        font-family: Fjalla One;
+    .event-item {
+        // styling för varje eventobjekt
+        background-color: $yellow-color;
+        text-align: center;
+        border: 3px solid black;
 
-        #event-list {
-            width: 100%;
-            border-collapse: collapse;
-            
-        }
 
-        .event-item { // styling för varje eventobjekt
-            background-color: $yellow-color;
-            text-align: center;
-            border: 3px solid black;
-        
-        
-            td {
-                padding: 1.5rem;
+        td {
+            padding: 1.5rem;
 
-                button {
-                    background-color: $green-color;
-                    border: 2px solid black;
-                    padding: 0.3rem;
-                    box-shadow: 2px 2px black;
-                }
-            
+            button {
+                background-color: $green-color;
+                border: 2px solid black;
+                padding: 0.3rem;
+                box-shadow: 2px 2px black;
             }
-            
-            
-            
-            
-            
-        }
-    }
 
-    .cancelled {
-        color: #cf2a27;
+        }
+
+
+
+
+
     }
+}
+
+.cancelled {
+    color: #cf2a27;
+}

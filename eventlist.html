@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <link href='https://fonts.googleapis.com/css?family=Fjalla One' rel='stylesheet'>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
@@ -8,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Event List</title>
 </head>
+
 <body>
     <div class="grid-container">
         <nav>
@@ -19,23 +21,24 @@
                 <button class="nav-button">Events</button>
             </div>
         </nav>
-    <div class="filter">
-        <div>
-            <select name="category-menu"  id="category">
-                <option>Category</option>
-                <option value="">music</option> <!--vad ska vi ha för options?-->
-                <option value="">sport</option>
-                <option value="">art</option>
-            </select>
+        <div class="filter">
+            <div>
+                <select name="category-menu" id="category">
+                    <option>Category</option>
+                    <option value="">Music</option>
+                    <!--vad ska vi ha för options?-->
+                    <option value="">Sport</option>
+                    <option value="">Stand Up</option>
+                </select>
+            </div>
+            <div>
+                <button id="date-button">Sort By Date</button>
+            </div>
+
         </div>
-        <div>
-            <button id="date-button">Sort By Date</button>
-        </div>
-        
-    </div>
-    <main>
-        <table id="event-list">
-            <!--<tr class="event-item">
+        <main>
+            <table id="event-list">
+                <!--<tr class="event-item">
                 <td>Date</td>
                 <td>Michael Jackson</td>
                 <td>Friends Arena</td>
@@ -59,12 +62,12 @@
                 <td>Fasching</td>
                 <td>Button</td>
             </tr>-->
-            
-        </table>
-    </main>
+
+            </table>
+        </main>
 
 
-    <!--TODO:
+        <!--TODO:
 
    -  skapa  inga event i html. 
     När sidan laddat ska eventobjekten skapas med js och visas i lista-boxen.
@@ -93,7 +96,8 @@
     Det behöv en adminknapp
     Här ska det finnas ett formulär som endast visas när man trycker på admin. 
     Med detta kan man CRUDA nya evenemang till tablet-->
-</div>
-<script src="eventlist.js"></script>
+    </div>
+    <script src="eventlist.js"></script>
 </body>
+
 </html>
