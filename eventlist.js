@@ -2,11 +2,12 @@
 
 class EventList {
     constructor(){
-        this.eventArray = []; // array som ska innehålla alla eventobjekt.
+        this.eventArray = []; // array som ska innehålla alla eventobjekt. (Kanske inte kommer behövas?)
+        console.log(this.eventArray);
     }
 
-    //lägger till eventet i den synliga listan
-    printEvent(event){
+    //lägger till eventet i den synliga listan och i arrayen.
+    addEvent(event){
         let list = document.getElementById("event-list");
         let row = document.createElement("tr");
         row.classList.add("event-item")
@@ -23,21 +24,35 @@ class EventList {
         row.append(td_name);
         row.append(td_location);
         row.append(td_avaliable);
+
+        this.eventArray.push(event);
         
     }  
-    // lägger till eventetobjektet i eventarrayen och sparar det i local storage 
-    addEvent() {
+    //  sparar array av eventobjecten i local storage med hjälp av JSON.stringify
+    storeEvent(event) {
+        
+        let event_string = JSON.stringify(this.eventArray);
+        localStorage.setItem("event_array", event_string);
+        
+    }
+    // filtrerar ut event med valfri kategori
+    filter(){
+
+    }
+    //sortera listan i datum-ordning. 
+    sort(){
 
     }
 }
 
 class Event {
-    constructor(date, name, location, category, isAvaliable){
-        this.date = date;
+    constructor(date, name, location, category, isAvaliable){ // eventuellt kommer varje objekt behöva ett id.
+        this.date = date; // hur ska vi hantera datum för att det ska gå att sortera sedan?
         this.name = name;
         this.location = location;
         this.category = category;
-        this.isAvaliable = isAvaliable;
+        this.isAvaliable = isAvaliable; // tänker att om det är true betyder det att det kommer vara en knapp här som tar en till detaljsidan
+                                        //men om  det är false så kommer det istället stå cancelled. 
     }
 
 }
@@ -48,9 +63,16 @@ let event2 = new Event(8, "Shiho", "Nackademin", "music", true)
 let event3 = new Event(4, "Kweku", "Hemma", "Art", true)
 let event4 = new Event(5, "Robin", "Borta", "music", false)
 let eventlist = new EventList;
-eventlist.printEvent(event1);
-eventlist.printEvent(event2);
-eventlist.printEvent(event3);
-eventlist.printEvent(event4);
+eventlist.addEvent(event1);
+eventlist.addEvent(event2);
+eventlist.addEvent(event3);
+eventlist.addEvent(event4);
+
+eventlist.storeEvent(event1);
+eventlist.storeEvent(event2);
+eventlist.storeEvent(event3);
+eventlist.storeEvent(event4);
+
+
 
 

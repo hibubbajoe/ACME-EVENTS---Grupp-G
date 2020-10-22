@@ -71,7 +71,7 @@
   margin-top: 4rem;
   margin-right: 1rem;
   background-color: #ffcb77;
-  border: 2px solid black;
+  border: 3px solid black;
 }
 
 .grid-container .filter > div button {
@@ -103,6 +103,6 @@ main .event-item {
 }
 
 main .event-item td {
-  padding: 2rem;
+  padding: 1.5rem;
 }
 /*# sourceMappingURL=eventlist.css.map */
