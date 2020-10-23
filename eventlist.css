@@ -53,6 +53,16 @@
   font-size: 30px;
 }
 
+.grid-container nav .nav-buttons-wrapper .nav-button a:link {
+  color: black;
+  text-decoration: none;
+}
+
+.grid-container nav .nav-buttons-wrapper .nav-button a:visited {
+  color: black;
+  text-decoration: none;
+}
+
 .grid-container .filter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,7 +76,7 @@
           justify-content: flex-end;
 }
 
-.grid-container .filter > div {
+.grid-container .filter div {
   padding: 0.3rem;
   margin-top: 4rem;
   margin-right: 1rem;
@@ -74,12 +84,12 @@
   border: 3px solid black;
 }
 
-.grid-container .filter > div button {
+.grid-container .filter div button {
   background-color: #ffcb77;
   border: none;
 }
 
-.grid-container .filter > div select {
+.grid-container .filter div select {
   background-color: #ffcb77;
   border: none;
 }
@@ -96,17 +106,17 @@ main #event-list {
   border-collapse: collapse;
 }
 
-main .event-item {
+main #event-list .event-item {
   background-color: #ffcb77;
   text-align: center;
   border: 3px solid black;
 }
 
-main .event-item td {
+main #event-list .event-item td {
   padding: 1.5rem;
 }
 
-main .event-item td button {
+main #event-list .event-item td button {
   background-color: #17c3b2;
   border: 2px solid black;
   padding: 0.3rem;

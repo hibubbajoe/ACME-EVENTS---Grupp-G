@@ -42,7 +42,17 @@ nav {
             font-family: 'Pacifico', cursive;
             color: $nav-button-color;
             font-size: $nav-button-fontsize;
-
+            
+            a:link{
+                all:unset;
+                color:pink !important;
+                text-decoration: none;
+            }
+            a:visited{
+                all:unset;
+                color:pink !important;
+                text-decoration: none;
+            }
         }
 
     }
