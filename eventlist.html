@@ -24,17 +24,21 @@
         <div class="filter">
             <div>
                 <select name="category-menu" id="category">
-                    <option>Category</option>
-                    <option value="">Music</option>
+                    <option value="Category">Category</option>
+                    <option value="Music">Music</option>
                     <!--vad ska vi ha för options?-->
-                    <option value="">Sport</option>
-                    <option value="">Stand Up</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Stand Up">Stand Up</option>
                 </select>
             </div>
             <div>
-                <button id="date-button">Sort By Date</button>
-            </div>
+                <select name="date-menu" id="date">
 
+                    <!--<button id="date-button">Sort By Date</button>-->
+                    <option id="date-new">Sort by New</option>
+                    <option id="date-old">Sort by Old</option>
+                </select>
+            </div>
         </div>
         <main>
             <table id="event-list">

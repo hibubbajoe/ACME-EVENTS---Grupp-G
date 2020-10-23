@@ -82,6 +82,10 @@ main {
     //border: 1px solid black;
     font-family: Fjalla One;
 
+    .hidden {
+        display: none;
+    }
+
     #event-list {
         width: 100%;
         border-collapse: collapse;

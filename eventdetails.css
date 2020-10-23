@@ -64,8 +64,8 @@
   background-color: #254441;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr 1fr;
-      grid-template-columns: 1fr 2fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 4fr 4fr;
       grid-template-rows: 4fr 4fr;
       grid-template-areas: "image-column image-column image-column" "left middle right";
@@ -240,14 +240,16 @@
   -ms-grid-row: 2;
   -ms-grid-column: 2;
   grid-area: middle;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  justify-self: center;
+  margin: 50px 0px 30px 0px;
   width: 480px;
-  row-gap: 70px;
-  margin: 60px 0px 20px 240px;
   color: #fef9ef;
   font-family: 'Fjalla One';
 }

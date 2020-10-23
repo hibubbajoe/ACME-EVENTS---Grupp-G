@@ -91,6 +91,10 @@ main {
   font-family: Fjalla One;
 }
 
+main .hidden {
+  display: none;
+}
+
 main #event-list {
   width: 100%;
   border-collapse: collapse;

@@ -63,7 +63,7 @@ $event-column-row-gap:70px;
         grid-area: main-columns;
         background-color: $green;
         display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 4fr 4fr;
 
         grid-template-areas:
@@ -199,7 +199,6 @@ $event-column-row-gap:70px;
             }
 
             #email-button {
-
                 height: 30px;
                 width: 72px;
                 margin-left: 10px;
@@ -211,16 +210,15 @@ $event-column-row-gap:70px;
 
         .about-event {
             grid-area: middle;
-            justify-content: center;
-            align-content: center;
+            display: flex;
+            flex-direction: column;
+            justify-self: center;
+            margin: 50px 0px 30px 0px;
             width: 480px;
-            row-gap: $event-column-row-gap;
-            margin: 60px 0px 20px 240px;
+            //row-gap: $event-column-row-gap;
+            // margin: 60px 0px 20px 240px;
             color: $beige;
             font-family: 'Fjalla One';
-
-
-
         }
     }
 }
