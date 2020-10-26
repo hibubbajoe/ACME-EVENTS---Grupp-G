@@ -53,36 +53,32 @@ let crud_list = document.getElementById("crud-list");
             let td_name = document.createElement("td");
             let td_location = document.createElement("td");
             let td_avaliable = document.createElement("td");
-            let td_edit = document.createElement("button");
-            let td_delete = document.createElement("button");
+            let td_edit = document.createElement("td");
+            let edit_btn = document.createElement("button");
+            let td_delete = document.createElement("td");
+            let delete_btn = document.createElement("button");
             td_date.innerText = event.date;
             td_name.innerText = event.name;
             td_location.innerText = event.location;
-            td_edit.innerText = "Edit"
-            td_delete.innerText = "Delete"
+            edit_btn.innerText = "Edit"
+            delete_btn.innerText = "Delete"
             
-
             crud_list.append(row);
             row.append(td_date);
             row.append(td_name);
             row.append(td_location);
             
-
             if (!event.isAvaliable) {
-                td_avaliable.innerText = "cancelled"
-                td_avaliable.classList.add("cancelled");
+                td_avaliable.innerText = "Cancelled"
                 row.append(td_avaliable);
-                //hämta class som gör texten röd
             } else {
-                let more_info_btn = document.createElement("button");
-                more_info_btn.innerText = "More info";
-                more_info_btn.setAttribute("onclick", "window.location.href='eventdetails.html';")
-                td_avaliable.append(more_info_btn);
+              td_avaliable.innerText = "More Info";
                 row.append(td_avaliable);
             }
-
+            td_edit.append(edit_btn);
             row.append(td_edit);
-            td_edit.classList.add("edit");
+            edit_btn.classList.add("edit");
+            td_delete.append(delete_btn);
             row.append(td_delete);
-            td_delete.classList.add("delete");
+            delete_btn.classList.add("delete");
         }
