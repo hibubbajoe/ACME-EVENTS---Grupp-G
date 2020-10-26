@@ -21,7 +21,12 @@ class EventList {
         let event_string = JSON.stringify(this.eventArray);
         localStorage.setItem("event_array", event_string);
     }
+    // tanke om att ha en egen metod för att hämta data från local storage istället för att det ligger i printEvent. 
+    //eftersom det är olika saker och att det görs vid många tillfällen, även sen för at CRUDA.
+    //det är ju inte alltid man kommer vilja skriva ut datan bara för att man hämtar den.
+    getEvents() {
 
+    }
     //hämtar data från local storage och skriv ut som lista.
     printEvent(key) {
 
@@ -30,11 +35,11 @@ class EventList {
         if (key === "filtered") {
             this.clearTable();
             event_obj = JSON.parse(localStorage.getItem("filtered_array"));
-
-            //annars hämtas "event_array" och hela listan skrivs.
+            //om sorterad lista ska skrivas ut....
         } else if (key === "sorted") {
             this.clearTable();
             event_obj = JSON.parse(localStorage.getItem("sorted_array"));
+            //annars hämtas "event_array" och hela listan skrivs.
         } else {
             event_obj = JSON.parse(localStorage.getItem("event_array"));
             console.log("Array med alla objekt:")

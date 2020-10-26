@@ -1,45 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Fjalla One&display=swap");
 .grid-container {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 0.2fr 4fr;
-      grid-template-rows: 0.2fr 4fr;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
-      grid-template-areas: "nav-columns" "main-columns";
+  grid-template-rows: 0.2fr 4fr;
+  grid-template-columns: 1fr;
+  grid-template-areas: "nav-columns" "main-columns";
 }
 
 .grid-container nav {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: nav-columns;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 7fr 3fr;
-      grid-template-columns: 2fr 7fr 3fr;
-      grid-template-areas: "logo-column space button-column";
+  grid-template-columns: 2fr 7fr 3fr;
+  grid-template-areas: "logo-column space button-column";
   background-color: #fef9ef;
 }
 
 .grid-container nav .logo {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: logo-column;
   max-height: 100px;
   padding: 30px;
 }
 
 .grid-container nav .nav-buttons-wrapper {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: button-column;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-      grid-template-columns: 1fr 1fr;
-  -ms-grid-columns: "left right";
-      grid-template-columns: "left right";
+  grid-template-columns: 1fr 1fr;
+  grid-template-columns: "left right";
 }
 
 .grid-container nav .nav-buttons-wrapper .nav-button {
@@ -58,58 +44,35 @@
 }
 
 .grid-container main {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: main-columns;
   background-color: #254441;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-rows: 4fr 4fr;
-      grid-template-rows: 4fr 4fr;
-      grid-template-areas: "image-column image-column image-column" "left middle right";
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 4fr 4fr;
+  grid-template-areas: "image-column image-column image-column" "left middle right";
 }
 
 .grid-container main .event-image {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
   grid-area: image-column;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .grid-container main .event-image #event-image {
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 70% 0;
-     object-position: 70% 0;
+  object-fit: cover;
+  object-position: 70% 0;
 }
 
 .grid-container main .event-short-info {
   font-size: 20px;
   text-align: center;
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: middle;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: safe center;
-      -ms-flex-pack: safe center;
-          justify-content: safe center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: safe center;
+  align-items: flex-start;
   margin-top: -20px;
 }
 
@@ -120,8 +83,7 @@
   width: 400px;
   background-color: #ffcb77;
   border: 2px solid black;
-  -webkit-box-shadow: 2px 2px black;
-          box-shadow: 2px 2px black;
+  box-shadow: 2px 2px black;
 }
 
 .grid-container main .event-short-info span {
@@ -135,8 +97,7 @@
   padding: 10px;
   background-color: #17c3b2;
   border: 2px solid black;
-  -webkit-box-shadow: 2px 2px black;
-          box-shadow: 2px 2px black;
+  box-shadow: 2px 2px black;
   width: 125px;
 }
 
@@ -153,17 +114,10 @@
 }
 
 .grid-container main .message-us {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: left;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-wrap: wrap;
+  align-items: flex-end;
   margin: 5px 0px 50px 50px;
 }
 
@@ -173,8 +127,7 @@
   border: 1px black solid;
   background-color: #fef9ef;
   border: 2px solid black;
-  -webkit-box-shadow: 2px 2px black;
-          box-shadow: 2px 2px black;
+  box-shadow: 2px 2px black;
   margin-top: -270px;
 }
 
@@ -185,8 +138,7 @@
   height: 25px;
   background-color: #fef9ef;
   border: 2px solid black;
-  -webkit-box-shadow: 2px 2px black;
-          box-shadow: 2px 2px black;
+  box-shadow: 2px 2px black;
 }
 
 .grid-container main .message-us #submit-message {
@@ -196,22 +148,15 @@
   margin-left: 10px;
   background-color: #fef9ef;
   border: 2px solid black;
-  -webkit-box-shadow: 2px 2px black;
-          box-shadow: 2px 2px black;
+  box-shadow: 2px 2px black;
 }
 
 .grid-container main .email-list {
   font-family: 'Fjalla One';
-  -ms-grid-row: 2;
-  -ms-grid-column: 3;
   grid-area: right;
   display: none;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  justify-content: flex-end;
+  align-items: flex-end;
   margin: 50px;
 }
 
@@ -222,8 +167,7 @@
   margin-left: 10px;
   background-color: #fef9ef;
   border: 2px solid black;
-  -webkit-box-shadow: 2px 2px black;
-          box-shadow: 2px 2px black;
+  box-shadow: 2px 2px black;
 }
 
 .grid-container main .email-list #email-button {
@@ -232,25 +176,16 @@
   margin-left: 10px;
   background-color: #fef9ef;
   border: 2px solid black;
-  -webkit-box-shadow: 2px 2px black;
-          box-shadow: 2px 2px black;
+  box-shadow: 2px 2px black;
 }
 
 .grid-container main .about-event {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: middle;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  justify-self: center;
-  margin: 50px 0px 30px 0px;
+  justify-content: center;
+  align-content: center;
   width: 480px;
+  row-gap: 70px;
+  margin: 60px 0px 20px 240px;
   color: #fef9ef;
   font-family: 'Fjalla One';
 }
-/*# sourceMappingURL=eventdetails.css.map */
