@@ -68,7 +68,7 @@
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 4fr 4fr;
       grid-template-rows: 4fr 4fr;
-      grid-template-areas: "image-column image-column image-column" "left middle right";
+      grid-template-areas: "image-column image-column image-column" "left middle right";
 }
 
 .grid-container main .event-image {

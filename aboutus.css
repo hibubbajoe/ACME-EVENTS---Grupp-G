@@ -55,13 +55,13 @@ nav .nav-buttons-wrapper .nav-button {
 
 nav .nav-buttons-wrapper .nav-button a:link {
   all: unset;
-  color: pink !important;
+  color: black;
   text-decoration: none;
 }
 
 nav .nav-buttons-wrapper .nav-button a:visited {
   all: unset;
-  color: pink !important;
+  color: black;
   text-decoration: none;
 }
 
