@@ -2,18 +2,25 @@
 <html lang="en">
 
 <head>
+    <link rel="stylesheet" href="admin.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
 
 <body>
+    <h1>Current Events</h1>
+    <div>
+        <table id="crud-list">
+
+        </table>
+    </div>
 
 
 
 
 
-    <button id="create">Create New Event</button>
+    <button id="create">Add Event</button>
     <div id="popup">
         <input id="date" type="text" placeholder="date">
         <input id="event" type="text" placeholder="event">
@@ -22,10 +29,11 @@
         <input id="tickets" type="text" placeholder="tickets available">
         <button id="add">Add This Event</button>
         <button id="remove">Remove</button>
-        <script src="admin.js"></script>
+        
 
         <ol id="list">HEKL</ol>
 
+        <script src="admin.js"></script>
 </body>
 
 </html>
