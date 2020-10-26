@@ -64,6 +64,7 @@ nav {
   //om vi kör "left eventcolumn middle eventcolumn right , så kommer vi ända behöva fylla left,middle och right med någonting.
 
   main {
+    font-family: fjalla one;
     grid-area: main-columns; // namnet på dom grid-cellerna som elementet ska finnas på
     background-color: $background-color;
     display: grid;

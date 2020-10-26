@@ -60,6 +60,7 @@ nav .nav-buttons-wrapper .nav-button a:visited {
 }
 
 .grid-container main {
+  font-family: fjalla one;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   -ms-grid-column-span: 5;
