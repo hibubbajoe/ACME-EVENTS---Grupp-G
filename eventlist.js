@@ -16,9 +16,14 @@ class EventList {
     addEvent(event) {
         this.eventArray.push(event);
     }
+
+    deleteEvent(index, amount) {
+        this.eventArray.splice(index, amount);
+    }
+
     //sparar array av eventobjekten i local storage 
     storeEvent() {
-     let event_string = JSON.stringify(this.eventArray);
+        let event_string = JSON.stringify(this.eventArray);
         localStorage.setItem("event_array", event_string);
     }
     // tanke om att ha en egen metod för att hämta data från local storage istället för att det ligger i printEvent. 
@@ -31,12 +36,8 @@ class EventList {
     printEvent(key) {
 
         let event_obj;
-        //om den filtrerade listan ska skrivas ut tas nuvarande innehållet i listan bort, sedan hämtas "filtered_Array"
-        if (key === "filtered") {
-            this.clearTable();
-            event_obj = JSON.parse(localStorage.getItem("filtered_array"));
-            //om sorterad lista ska skrivas ut....
-        } else if (key === "sorted") {
+
+        if (key === "sorted") {
             this.clearTable();
             event_obj = JSON.parse(localStorage.getItem("sorted_array"));
             //annars hämtas "event_array" och hela listan skrivs.
@@ -113,37 +114,6 @@ class EventList {
         localStorage.setItem("filtered_array", event_string);
     }
 
-    /*
-        // filtrerar ut event med valfri kategori från dropdown-menyn.
-        filter() {
-    
-            //om det är "category" som väljs ska alla skrivas ut igen
-            if (this.filter_btn.options[this.filter_btn.selectedIndex].text === "Category") {
-                this.clearTable();
-                this.printEvent();
-            } else {
-                //loopa igenom alla object i local storage. om objektens egenskap "category" har samma värde som vald kategori så ska de filtreras ut med filterfunktion
-                let event_obj = JSON.parse(localStorage.getItem("event_array"));
-                let filtered_array = event_obj.filter((obj) => {
-                    return obj.category === this.filter_btn.options[this.filter_btn.selectedIndex].text;
-                });
-                console.log("Array som filtrerats:");
-                console.log(filtered_array);
-    
-                //spara till local storage
-                let event_string = JSON.stringify(filtered_array);
-                localStorage.setItem("filtered_array", event_string);
-    
-                //skriv ut de filtrerade objekten
-                let key = "filtered";
-                this.printEvent(key);
-            }
-        }
-    */
-
-    //sort function to give ascending or descending order
-
-
     //sort function to give ascending or descending order
     sort() {
 
@@ -179,9 +149,6 @@ class EventList {
     }
 }
 
-
-
-
 class Events {
     constructor(date, name, location, category, isAvaliable) { // eventuellt kommer varje objekt behöva ett id.
         this.date = date; // hur ska vi hantera datum för att det ska gå att sortera sedan?
@@ -197,10 +164,10 @@ class Events {
 
 // Några Eventobjekt som ska finnas från början när sidan har laddats.
 
-let event2 = new Events( "August 13, 23:00", "Nina Simone", "Fasching", "Music", false)
-let event1 = new Events( "August 17, 13:00", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
-let event3 = new Events( "July 3, 22:00", "Anthony Jeselnik", "Civic Auditorium", "Stand Up", false)
-let event4 = new Events( "July 7, 20:00", "James Blake", "L'Olympia", "Music", true)
+let event1 = new Events("July 3, 22:00", "Anthony Jeselnik", "Civic Auditorium", "Stand Up", false)
+let event2 = new Events("July 7, 20:00", "James Blake", "L'Olympia", "Music", true)
+let event3 = new Events("August 13, 23:00", "Nina Simone", "Fasching", "Music", false)
+let event4 = new Events("August 17, 13:00", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
 
 let eventlist = new EventList;
 
