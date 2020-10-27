@@ -1,7 +1,8 @@
 let createButton = document.getElementById("create")
 let addButton = document.getElementById("add")
-let deleteButton = document.getElementById("delete") 
 let event_array_crud = JSON.parse(localStorage.getItem("event_array_crud_string")) //Få in event_array som en array att jobba med // namnet event_array_crud för att hålla isär den variabeln från den i eventlist
+
+
 
 
 document.getElementById("popup").style.display = "none"
@@ -12,29 +13,20 @@ document.getElementById("popup").style.display = "block"
 
 addButton.addEventListener("click", function(){
 
-  let date = document.getElementById("date").value;
-  let name = document.getElementById("event").value;
-  let location = document.getElementById("place").value;
-  let category = document.getElementById("event_type").value;
-  //let tickets_available = document.getElementById.bool 
-  
 
-  let new_event = {date:date, name:name, location:location, category:category} //Går det att läsa in klassen från eventlist.js?, hur isåfall
+let date = document.getElementById("date").value
+let event = document.getElementById("event").value
+let place = document.getElementById("place").value
+let category = document.getElementById("category").value
+let  tickets = document.getElementById("tickets").value
 
-event_array_crud_string = JSON.stringify(event_array_crud)
-localStorage.setItem("event_array_crud_string", event_array_crud_string)
-event_array_crud.push(new_event)
-
-console.log(event_array_crud)
-
-print();
-
-function print(){
-var item = document.createElement("li")
-document.getElementById("list").appendChild(item)
-}
+let new_event = new Events(date, event, place, category, tickets);
+console.log(new_event)
+eventlist.addEvent(new_event)
+eventlist.storeEvent(new_event)
+printEvents();
+//localStorage.clear()
 })
-
 
 /*
 deleteButton.addEventListener("click",function(){
@@ -42,7 +34,15 @@ deleteButton.addEventListener("click",function(){
 
 })
 */
+
+
+
+
+
+
+
  /*-----sara lagt till: -------------*/
+function printEvents(){ 
 event_obj = JSON.parse(localStorage.getItem("event_array"));
 let crud_list = document.getElementById("crud-list");
 
@@ -57,6 +57,7 @@ let crud_list = document.getElementById("crud-list");
             let edit_btn = document.createElement("button");
             let td_delete = document.createElement("td");
             let delete_btn = document.createElement("button");
+            delete_btn.setAttribute("id", "delete_btn");
             td_date.innerText = event.date;
             td_name.innerText = event.name;
             td_location.innerText = event.location;
@@ -82,3 +83,29 @@ let crud_list = document.getElementById("crud-list");
             row.append(td_delete);
             delete_btn.classList.add("delete");
         }
+    }
+
+
+    printEvents();
+
+    document.querySelectorAll(".delete").forEach(item =>{
+        item.addEventListener("click", event =>{
+
+      let eventArray = JSON.parse(localStorage.getItem("event_array"))
+
+  //    console.log(eventArray)
+
+eventArray.forEach(
+(event,index) => {
+console.log(event)
+let remove_item = document.getElementsByClassName("crud-item")
+if (remove_item)
+remove_item[index].style.display = "none";
+//console.log(remove_item);
+}    
+)
+
+        })
+    })
+    
+    

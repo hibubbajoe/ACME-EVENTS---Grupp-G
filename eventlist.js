@@ -18,7 +18,7 @@ class EventList {
     }
     //sparar array av eventobjekten i local storage 
     storeEvent() {
-        let event_string = JSON.stringify(this.eventArray);
+     let event_string = JSON.stringify(this.eventArray);
         localStorage.setItem("event_array", event_string);
     }
     // tanke om att ha en egen metod för att hämta data från local storage istället för att det ligger i printEvent. 
@@ -179,9 +179,11 @@ class EventList {
     }
 }
 
-class Event {
-    constructor(id, date, name, location, category, isAvaliable) { // eventuellt kommer varje objekt behöva ett id.
-        this.id = id;
+
+
+
+class Events {
+    constructor(date, name, location, category, isAvaliable) { // eventuellt kommer varje objekt behöva ett id.
         this.date = date; // hur ska vi hantera datum för att det ska gå att sortera sedan?
         this.name = name;
         this.location = location;
@@ -191,11 +193,14 @@ class Event {
     }
 }
 
+
+
 // Några Eventobjekt som ska finnas från början när sidan har laddats.
-let event1 = new Event(1, "August 17, 13:00", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
-let event2 = new Event(2, "August 13, 23:00", "Nina Simone", "Fasching", "Music", false)
-let event3 = new Event(3, "July 3, 22:00", "Anthony Jeselnik", "Civic Auditorium", "Stand Up", false)
-let event4 = new Event(4, "July 7, 20:00", "James Blake", "L'Olympia", "Music", true)
+
+let event2 = new Events( "August 13, 23:00", "Nina Simone", "Fasching", "Music", false)
+let event1 = new Events( "August 17, 13:00", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
+let event3 = new Events( "July 3, 22:00", "Anthony Jeselnik", "Civic Auditorium", "Stand Up", false)
+let event4 = new Events( "July 7, 20:00", "James Blake", "L'Olympia", "Music", true)
 
 let eventlist = new EventList;
 
@@ -209,8 +214,10 @@ eventlist.storeEvent(event2);
 eventlist.storeEvent(event3);
 eventlist.storeEvent(event4);
 
-eventlist.printEvent();
 
+
+
+eventlist.printEvent();
 
 
 

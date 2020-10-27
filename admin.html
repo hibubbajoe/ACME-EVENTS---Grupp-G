@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
 </head>
 
 <body>
@@ -22,18 +23,20 @@
 
     <button id="create">Add Event</button>
     <div id="popup">
-        <input id="date" type="text" placeholder="date">
+        <input id="date" type="date" min="2020-01-01" max="2022-01-01" placeholder="date" value="2020-01-01">
         <input id="event" type="text" placeholder="event">
         <input id="place" type="text" placeholder="place">
-        <input id="event_type" type="text" placeholder="event type">
-        <input id="tickets" type="text" placeholder="tickets available">
+        <input id="category" type="text" placeholder="event type">
+        <input id="tickets" type="text" placeholder="tickets available" value="false">
         <button id="add">Add This Event</button>
         <button id="remove">Remove</button>
-        
+
 
         <ol id="list">HEKL</ol>
 
+        <script src="eventlist.js"></script>
         <script src="admin.js"></script>
+
 </body>
 
 </html>
