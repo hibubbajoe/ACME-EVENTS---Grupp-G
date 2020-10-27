@@ -168,24 +168,4 @@ nav .nav-buttons-wrapper .nav-button a:visited {
   font-size: 50px;
   margin: 30px 300px 30px 300px;
 }
-
-.footer {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background: #fef9ef;
-}
-
-.detale ul {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
-  margin: 50px;
-}
-
-.detale ul li {
-  list-style: none;
-  margin: 0 20px;
-  cursor: pointer;
-}
 /*# sourceMappingURL=aboutus.css.map */

@@ -72,7 +72,7 @@ nav .nav-buttons-wrapper .nav-button a:visited {
       grid-template-columns: 1fr 2fr 1.5fr 2fr 1fr;
   -ms-grid-rows: 1fr 6fr 1fr;
       grid-template-rows: 1fr 6fr 1fr;
-      grid-template-areas: "header-text header-text header-text header-text header-text" "ett två tre fyra fem" "footer footer footer footer footer";
+      grid-template-areas: "header-text header-text header-text header-text header-text" "ett två tre fyra fem" "footer footer footer footer footer";
 }
 
 .grid-container main header {
@@ -92,7 +92,7 @@ nav .nav-buttons-wrapper .nav-button a:visited {
   display: grid;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "top" "bottom";
+      grid-template-areas: "top" "bottom";
   row-gap: 70px;
 }
 
@@ -146,7 +146,7 @@ nav .nav-buttons-wrapper .nav-button a:visited {
   display: grid;
   -ms-grid-rows: 1fr 1fr;
       grid-template-rows: 1fr 1fr;
-      grid-template-areas: "top" "bottom";
+      grid-template-areas: "top" "bottom";
   row-gap: 70px;
 }
 
