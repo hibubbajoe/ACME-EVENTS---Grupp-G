@@ -170,10 +170,27 @@ nav .nav-buttons-wrapper .nav-button a:visited {
 }
 
 .footer {
-  width: 100%;
-  height: 100%;
-  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 0.8rem;
   background: #fef9ef;
+}
+
+.footer .scrum {
+  width: 50%;
+}
+
+.footer .scrum h1 {
+  padding: 1rem;
+}
+
+.footer .scrum p {
+  padding: 1rem;
 }
 
 .detale ul {
