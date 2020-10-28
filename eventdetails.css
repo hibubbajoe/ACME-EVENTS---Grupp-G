@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Fjalla One&display=swap");
+body {
+  margin: 0;
+}
+
 .grid-container {
   display: -ms-grid;
   display: grid;

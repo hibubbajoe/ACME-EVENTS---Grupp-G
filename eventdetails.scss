@@ -11,6 +11,10 @@ $pink: #fe6d73;
 
 $event-column-row-gap: 70px;
 
+body{
+  margin: 0;
+}
+
 .grid-container {
   display: grid;
   grid-template-rows: 0.2fr 4fr; // rad 1 , rad 2
