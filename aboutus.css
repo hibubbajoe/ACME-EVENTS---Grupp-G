@@ -15,6 +15,7 @@ body {
 }
 
 nav {
+  grid-area: nav-columns;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 2fr 7fr 3fr;
@@ -53,16 +54,37 @@ nav .nav-buttons-wrapper .nav-button {
   font-size: 30px;
 }
 
-nav .nav-buttons-wrapper .nav-button a:link {
-  all: unset;
+nav a:link {
   color: black;
   text-decoration: none;
 }
 
-nav .nav-buttons-wrapper .nav-button a:visited {
-  all: unset;
-  color: black;
+nav a {
+  place-self: center;
+  position: relative;
+  display: inline-block;
   text-decoration: none;
+  color: black;
+}
+
+nav a::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: black;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+nav a:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
 }
 
 .banner {
