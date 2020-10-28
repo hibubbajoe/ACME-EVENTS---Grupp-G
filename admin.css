@@ -7,6 +7,15 @@ body {
   border-collapse: collapse;
 }
 
+#crud-list input {
+  background-color: transparent;
+  border: 0px black solid;
+  height: 50px;
+  width: 160px;
+  color: black;
+  font-size: 15px;
+}
+
 .crud-item {
   text-align: center;
   border-bottom: 1px solid blue;

@@ -5,6 +5,16 @@ body {
 #crud-list {
     width: 50%;
     border-collapse: collapse;
+
+    input {
+        background-color: transparent;
+        border: 0px black solid;
+        height: 50px;
+        width: 160px;
+        color: black;
+        font-size: 15px;
+    }
+
 }
 
 .crud-item {
@@ -12,6 +22,8 @@ body {
     text-align: center;
     border-bottom: 1px solid blue;
 }
+
+
 
 td {
     padding: 1rem;

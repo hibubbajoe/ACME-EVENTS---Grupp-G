@@ -24,20 +24,12 @@ class EventList {
         console.log(this.eventArray)
     };
 
-
-
-
     //sparar array av eventobjekten i local storage 
     storeEvent() {
         let event_string = JSON.stringify(this.eventArray);
         localStorage.setItem("event_array", event_string);
     }
-    // tanke om att ha en egen metod för att hämta data från local storage istället för att det ligger i printEvent. 
-    //eftersom det är olika saker och att det görs vid många tillfällen, även sen för at CRUDA.
-    //det är ju inte alltid man kommer vilja skriva ut datan bara för att man hämtar den.
-    getEvents() {
 
-    }
     //hämtar data från local storage och skriv ut som lista.
     printEvent(key) {
 
@@ -52,8 +44,6 @@ class EventList {
             console.log("Array med alla objekt:")
             console.log(event_obj);
         }
-
-        console.log(event_obj)
 
         let list = document.getElementById("event-list");
 
@@ -189,8 +179,6 @@ eventlist.storeEvent(event1);
 eventlist.storeEvent(event2);
 eventlist.storeEvent(event3);
 eventlist.storeEvent(event4);
-
-
 
 eventlist.printEvent();
 
