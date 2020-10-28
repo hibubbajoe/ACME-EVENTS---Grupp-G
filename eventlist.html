@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <link href='https://fonts.googleapis.com/css?family=Fjalla One' rel='stylesheet'>
-    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Pacifico" />
+    <link href="https://fonts.googleapis.com/css?family=Fjalla One" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Pacifico" />
     <link rel="stylesheet" href="eventlist.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,17 +12,18 @@
 
 <body>
     <div class="grid-container">
+        <!--Navbar ligger utanför grid för att kunna återanvändas nu-->
         <nav>
-            <a href="index.html">
-                <img src="jpeg/ACME-LOGO.png" alt="logo" class="logo">
-            </a>
+           <a href="index.html">
+               <img src="jpeg/ACME-LOGO.png" alt="logo" class="logo">
+           </a>
 
+           <div class="nav-buttons-wrapper">
+               <a href="aboutus.html" class="nav-button">About</a>
+               <a href="eventlist.html" class="nav-button">Events</a>
+           </div>
+       </nav>
 
-            <div class="nav-buttons-wrapper">
-                <button class="nav-button"><a href="aboutus.html">About</a></button>
-                <button class="nav-button"><a href="eventlist.html">Events</a></button>
-            </div>
-        </nav>
         <div class="filter">
             <div>
                 <select name="category-menu" id="category">

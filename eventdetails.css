@@ -61,6 +61,34 @@ body {
   text-decoration: none;
 }
 
+.grid-container nav a {
+  place-self: center;
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+}
+
+.grid-container nav a::after {
+  position: absolute;
+  bottom: 2px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background: black;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.grid-container nav a:hover::after {
+  bottom: -4px;
+  opacity: 1;
+  visibility: visible;
+}
+
 .grid-container main {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
@@ -72,7 +100,7 @@ body {
       grid-template-columns: 1fr 1fr 1fr;
   -ms-grid-rows: 4fr 4fr;
       grid-template-rows: 4fr 4fr;
-      grid-template-areas: "image-column image-column image-column" "left middle right";
+      grid-template-areas: "image-column image-column image-column" "left middle right";
 }
 
 .grid-container main .event-image {
