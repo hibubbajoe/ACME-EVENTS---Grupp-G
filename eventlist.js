@@ -19,9 +19,13 @@ class EventList {
         this.eventArray.splice(index, amount);
     };
 
-    editEvent() {
-
+    updateEvent(index, amount, change) {
+        this.eventArray.splice(index, amount, change);
+        console.log(this.eventArray)
     };
+
+
+
 
     //sparar array av eventobjekten i local storage 
     storeEvent() {
@@ -172,7 +176,7 @@ let event1 = new Events("July 3, 22:00", "Anthony Jeselnik", "Civic Auditorium",
 let event2 = new Events("July 7, 20:00", "James Blake", "L'Olympia", "Music", true)
 let event3 = new Events("August 13, 23:00", "Nina Simone", "Fasching", "Music", false)
 let event4 = new Events("August 17, 13:00", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
-let event5 = new Events("August 17, 13:00", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
+
 
 let eventlist = new EventList;
 

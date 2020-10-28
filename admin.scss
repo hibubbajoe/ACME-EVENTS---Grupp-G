@@ -1,5 +1,5 @@
-body{
-    font-family:  sans-serif;
+body {
+    font-family: sans-serif;
 }
 
 #crud-list {
@@ -12,24 +12,27 @@ body{
     text-align: center;
     border-bottom: 1px solid blue;
 }
- td {
-     padding: 1rem;
 
- }
+td {
+    padding: 1rem;
 
- .delete {
+}
+
+.delete {
     background-color: red;
-    
-  
- }
+}
 
- .edit {
+.edit {
     background-color: green;
-    
- }
 
- #create {
-     background-color:  green;
-     margin: 1rem;
-     padding: 1rem;
- }
+}
+
+.save {
+    background-color: yellow;
+}
+
+#create {
+    background-color: green;
+    margin: 1rem;
+    padding: 1rem;
+}

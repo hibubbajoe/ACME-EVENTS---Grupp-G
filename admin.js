@@ -1,11 +1,11 @@
-
+/*
 class LocalStorage {
     constructor(getData, setData, deleteDate) {
         this.getData = getData;
         this.setData = setData;
         this.deleteDate = deleteDate;
     }
-}
+}*/
 
 let createButton = document.getElementById("create")
 let addButton = document.getElementById("add")
@@ -20,6 +20,8 @@ createButton.addEventListener("click", function () {
 addButton.addEventListener("click", function () {
 
     let date = document.getElementById("date").value
+
+    console.log(date)
     let event = document.getElementById("event").value
     let place = document.getElementById("place").value
     let category = document.getElementById("category").value
@@ -40,13 +42,37 @@ function deleteEvents() {
     printEvents();
 }
 
+
+function saveRow() {
+
+    let row = event.target.parentNode.parentNode;
+    let temp_button = row.childNodes[5].childNodes[0]
+    let date = row.childNodes[0].value;
+    let event_name = row.childNodes[1].value;
+    let place = row.childNodes[2].value;
+    let category = row.childNodes[3].value;
+    let tickets = row.childNodes[4].value;
+
+    temp_button.style.visibility = "hidden";
+
+    let new_event = new Events(date, event_name, place, category, tickets);
+
+    eventlist.updateEvent(event.target.id, 1, new_event)
+    eventlist.storeEvent();
+
+}
+
 function editRow() {
 
     let row = event.target.parentNode.parentNode;
-    row.querySelectorAll("input").forEach(item => {
+    let temp_button = row.childNodes[5].childNodes[0]
 
+    //removes readonly attribute on row
+    row.querySelectorAll("input").forEach(item => {
         item.removeAttribute("readonly");
     })
+    //makes save button visible
+    temp_button.style.visibility = "";
 }
 
 
@@ -65,21 +91,32 @@ function printEvents() {
         let td_category = document.createElement("input");
         let td_avaliable = document.createElement("input");
         let td_edit = document.createElement("td");
-        let edit_btn = document.createElement("button");
         let td_delete = document.createElement("td");
+        let td_save = document.createElement("td");
+        let edit_btn = document.createElement("button");
+        let save_btn = document.createElement("button");
         let delete_btn = document.createElement("button");
 
         //set class and attributes
-        row.classList.add("crud-item")
         delete_btn.setAttribute(`id`, `${index}`);
         edit_btn.setAttribute(`id`, `${index}`);
+        save_btn.setAttribute(`id`, `${index}`);
+
+        //setting all inputs to only read
+        td_date.setAttribute("readonly", true);
+        td_name.setAttribute("readonly", true);
+        td_category.setAttribute("readonly", true);
+        td_location.setAttribute("readonly", true);
+        td_avaliable.setAttribute("readonly", true);
+
+        //adding classed to td's
+        row.classList.add("crud-item")
         edit_btn.classList.add("edit");
         delete_btn.classList.add("delete");
+        save_btn.classList.add("save");
+        save_btn.style.visibility = "hidden";
 
-        //making all input fields only readable
-        document.querySelectorAll("input").forEach(item => {
-            item.setAttribute("readonly", true);
-        })
+
 
         //get values 
         td_date.value = event.date;
@@ -88,7 +125,7 @@ function printEvents() {
         td_location.value = event.location;
         edit_btn.innerText = "Edit"
         delete_btn.innerText = "Delete"
-
+        save_btn.innerText = "Save";
 
         //append
         crud_list.append(row);
@@ -105,12 +142,15 @@ function printEvents() {
             row.append(td_avaliable);
         }
 
+        td_save.append(save_btn);
+        row.append(td_save);
         td_edit.append(edit_btn);
         row.append(td_edit);
         td_delete.append(delete_btn);
         row.append(td_delete);
 
     })
+
     //triggers when user press any delete button
     document.querySelectorAll(".delete").forEach(item => {
         item.addEventListener("click", event => {
@@ -121,6 +161,11 @@ function printEvents() {
     document.querySelectorAll(".edit").forEach(item => {
         item.addEventListener("click", event => {
             editRow();
+        })
+    })
+    document.querySelectorAll(".save").forEach(item => {
+        item.addEventListener("click", event => {
+            saveRow();
         })
     })
 }

@@ -24,6 +24,10 @@ td {
   background-color: green;
 }
 
+.save {
+  background-color: yellow;
+}
+
 #create {
   background-color: green;
   margin: 1rem;
