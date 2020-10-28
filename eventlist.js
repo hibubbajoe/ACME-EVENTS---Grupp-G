@@ -3,23 +3,25 @@ class EventList {
         this.eventArray = []; // array som ska innehålla alla eventobjekt. 
         this.filter_btn = document.getElementById("category");
         this.filter_btn.addEventListener("change", () => {
-            // this.filter();
             this.filterByCategory();
         });
         this.sort_btn = document.getElementById("date");
         this.sort_btn.addEventListener("change", () => {
             this.sort();
-            //this.sortByDate();
         })
     }
 
     addEvent(event) {
         this.eventArray.push(event);
-    }
+    };
 
     deleteEvent(index, amount) {
         this.eventArray.splice(index, amount);
-    }
+    };
+
+    editEvent() {
+
+    };
 
     //sparar array av eventobjekten i local storage 
     storeEvent() {
@@ -46,6 +48,8 @@ class EventList {
             console.log("Array med alla objekt:")
             console.log(event_obj);
         }
+
+        console.log(event_obj)
 
         let list = document.getElementById("event-list");
 
@@ -168,6 +172,7 @@ let event1 = new Events("July 3, 22:00", "Anthony Jeselnik", "Civic Auditorium",
 let event2 = new Events("July 7, 20:00", "James Blake", "L'Olympia", "Music", true)
 let event3 = new Events("August 13, 23:00", "Nina Simone", "Fasching", "Music", false)
 let event4 = new Events("August 17, 13:00", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
+let event5 = new Events("August 17, 13:00", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
 
 let eventlist = new EventList;
 
@@ -180,7 +185,6 @@ eventlist.storeEvent(event1);
 eventlist.storeEvent(event2);
 eventlist.storeEvent(event3);
 eventlist.storeEvent(event4);
-
 
 
 
