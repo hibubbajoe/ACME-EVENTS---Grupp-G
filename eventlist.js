@@ -24,10 +24,6 @@ class EventList {
             this.create();
         })
 
-        let edit_btn = document.getElementById("edit_form");
-            edit_btn.addEventListener("click", () => {
-                this.create();
-            })
         //tar bort klass hidden på deleteknapparna
         
         let delete_btns = document.querySelectorAll(".delete_btn");
@@ -38,12 +34,7 @@ class EventList {
         let edit_btns = document.querySelectorAll(".edit_btn");
         edit_btns.forEach(function(item){
             item.classList.toggle("hidden");
-        })
-
-        
-        
-        
-        
+        })    
 
     }
     // lägg in att knapparna ska visas döljar här så det slipper stå på så många ställen i koden
@@ -125,9 +116,27 @@ class EventList {
     edit() {
         let edit_form = document.getElementById("edit_form");
         edit_form.classList.toggle("hidden");
-        console.log("edited event");
+
         let index = event.target.id;
-        console.log(index);
+        console.log(this.eventArray[index].date);
+        //formuläret aka få de värden som objektet har just nu:
+        let input_date = document.getElementById("edit_date");
+        input_date.value = this.eventArray[index].date;
+        let input_name = document.getElementById("edit_name");
+        input_name.value = this.eventArray[index].name;
+        let input_location = document.getElementById("edit_location");
+        input_location.value = this.eventArray[index].location;
+        let input_category = document.getElementById("edit_event_category");
+        input_category.value = this.eventArray[index].category;
+        let input_isAvaliable = document.getElementById("edit_isAvaliable");
+        input_isAvaliable.value = this.eventArray[index].isAvaliable;
+
+        let edit_btn = document.getElementById("edit_form");
+            edit_btn.addEventListener("click", () => {
+                // när knappen trycks ska det sparas
+            })
+
+        
 
     };
 
