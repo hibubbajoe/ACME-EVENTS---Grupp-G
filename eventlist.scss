@@ -132,6 +132,12 @@ main {
           padding: 0.3rem;
           box-shadow: 2px 2px black;
         }
+        .delete_btn {
+            background-color: red;
+        }
+        .edit_btn {
+            background-color: green;
+        }
       }
     }
   }

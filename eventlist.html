@@ -45,32 +45,25 @@
         </div>
         <main>
             <table id="event-list">
-                <!--<tr class="event-item">
-                <td>Date</td>
-                <td>Michael Jackson</td>
-                <td>Friends Arena</td>
-                <td>Button</td>
-            </tr>
-            <tr class="event-item">
-                <td>Date</td>
-                <td>TOTO</td>
-                <td>Kungshamnsvallen</td>
-                <td>Button</td>
-            </tr>
-            <tr class="event-item">
-                <td>Date</td>
-                <td>Lollapalooza Stockholm</td>
-                <td>Gärdet</td>
-                <td>Button</td>
-            </tr>
-            <tr class="event-item">
-                <td>Date</td>
-                <td>Chet Baker</td>
-                <td>Fasching</td>
-                <td>Button</td>
-            </tr>-->
-
+    
             </table>
+            <button id="admin_btn">Admin</button>
+            <form class="hidden"id="add_form">
+                <input placeholder="Date"id="event_date" type="text">
+                <input placeholder="Name of event" id="name"type="text">
+                <input placeholder="Location" id="location"type="text">
+                <input placeholder="Category" id="event_category"type="text">
+                <input placeholder="Avaliable"id="isAvaliable"type="text">
+                <button type="button"id="create_btn">Add</button>
+            </form>
+            <form class="hidden"id="edit_form">
+                <input placeholder="Date"id="edit_date" type="text">
+                <input placeholder="Name of event" id="edit_name"type="text">
+                <input placeholder="Location" id="edit_location"type="text">
+                <input placeholder="Category" id="edit_event_category"type="text">
+                <input placeholder="Avaliable"id="edit_isAvaliable"type="text">
+                <button type="button"id="edit_btn">Save</button>
+            </form>
         </main>
 
 
@@ -104,8 +97,8 @@
     Här ska det finnas ett formulär som endast visas när man trycker på admin. 
     Med detta kan man CRUDA nya evenemang till tablet-->
     </div>
-    <script src="admin.js"></script>
     <script src="eventlist.js"></script>
+    <!--<script src="admin.js"></script>-->
 </body>
 
 </html>
