@@ -19,7 +19,7 @@ body {
 nav {
   grid-area: nav-columns; // namnet på dom grid-cellerna som elementet ska finnas på
   display: grid;
-  grid-template-columns: 2fr 7fr 3fr;
+  grid-template-columns: 2fr 5fr 4fr;
   grid-template-areas: "logo-column space button-column";
   background-color: $beige;
 
@@ -33,7 +33,7 @@ nav {
     grid-area: button-column;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-columns: "left right";
+    grid-template-areas: "left middle right";
 
     .nav-button {
       color: white;

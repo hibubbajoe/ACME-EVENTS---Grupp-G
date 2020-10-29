@@ -8,8 +8,8 @@ nav {
   grid-area: nav-columns;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 7fr 3fr;
-      grid-template-columns: 2fr 7fr 3fr;
+  -ms-grid-columns: 2fr 5fr 4fr;
+      grid-template-columns: 2fr 5fr 4fr;
       grid-template-areas: "logo-column space button-column";
   background-color: #fef9ef;
 }
@@ -30,8 +30,7 @@ nav .nav-buttons-wrapper {
   display: grid;
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-columns: "left right";
-      grid-template-columns: "left right";
+      grid-template-areas: "left middle right";
 }
 
 nav .nav-buttons-wrapper .nav-button {
