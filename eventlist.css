@@ -130,7 +130,7 @@ main {
 }
 
 main .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 main #event-list {

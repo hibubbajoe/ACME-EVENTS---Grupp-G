@@ -71,7 +71,7 @@ class EventList {
             let edit_btns = document.querySelectorAll(".edit_btn");
             edit_btns.forEach(function(item){
             console.log(item);
-            item.classList.toggle("hidden");
+            item.classList.remove("hidden");
         })
             
         })
@@ -145,6 +145,7 @@ class EventList {
                 this.eventArray[index].isAvaliable = input_isAvaliable.value;
                 console.log(this.eventArray[index]);
                 // uppdatera local storage 
+                index = null;
                 this.storeEvent(this.eventArray);
                 //uppdatera listan på sidan
                 this.clearTable();
@@ -159,6 +160,7 @@ class EventList {
                 edit_btns.forEach(function(item){
                 item.classList.toggle("hidden");
                 })  
+                edit_form.classList.toggle("hidden");
                 
             })
             

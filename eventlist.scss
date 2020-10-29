@@ -110,7 +110,7 @@ main {
   font-family: Fjalla One;
 
   .hidden {
-    display: none;
+    visibility: hidden;
   }
 
   #event-list {
