@@ -14,15 +14,16 @@ class EventList {
             //visa formuläret
             this.displayAdmin();
         })
+        let create_btn = document.getElementById("create_btn");
+        create_btn.addEventListener("click", () => {
+            this.create();
+        })
     }
     displayAdmin() {
         let add_form = document.getElementById("add_form");
         add_form.classList.toggle("hidden");
 
-        let create_btn = document.getElementById("create_btn");
-        create_btn.addEventListener("click", () => {
-            this.create();
-        })
+        
 
         //tar bort klass hidden på deleteknapparna
         
@@ -118,7 +119,8 @@ class EventList {
         edit_form.classList.toggle("hidden");
 
         let index = event.target.id;
-        console.log(this.eventArray[index].date);
+        //console.log(this.eventArray[index].date);
+        //console.log(this.eventArray[index]);
         //formuläret aka få de värden som objektet har just nu:
         let input_date = document.getElementById("edit_date");
         input_date.value = this.eventArray[index].date;
@@ -131,10 +133,38 @@ class EventList {
         let input_isAvaliable = document.getElementById("edit_isAvaliable");
         input_isAvaliable.value = this.eventArray[index].isAvaliable;
 
-        let edit_btn = document.getElementById("edit_form");
-            edit_btn.addEventListener("click", () => {
-                // när knappen trycks ska det sparas
+        let save_btn = document.getElementById("save_btn");
+            save_btn.addEventListener("click", () => {
+                
+                console.log(index);
+                // när save trycks ska det sparas
+                this.eventArray[index].date = input_date.value;
+                this.eventArray[index].name = input_name.value;
+                this.eventArray[index].location = input_location.value;
+                this.eventArray[index].category = input_category.value;
+                this.eventArray[index].isAvaliable = input_isAvaliable.value;
+                console.log(this.eventArray[index]);
+                // uppdatera local storage 
+                this.storeEvent(this.eventArray);
+                //uppdatera listan på sidan
+                this.clearTable();
+                this.printEvent();
+
+                let delete_btns = document.querySelectorAll(".delete_btn");
+                delete_btns.forEach(function(item){
+                item.classList.toggle("hidden");
+                })
+
+                let edit_btns = document.querySelectorAll(".edit_btn");
+                edit_btns.forEach(function(item){
+                item.classList.toggle("hidden");
+                })  
+                
             })
+            
+            
+            
+            
 
         
 
@@ -280,10 +310,12 @@ class EventList {
 
         //spara till local storage
         let event_string = JSON.stringify(sorted_array);
-        localStorage.setItem("sorted_array", event_string)
+        localStorage.setItem("event_array", event_string)
 
-        let key = "sorted";
-        this.printEvent(key);
+        this.clearTable();
+        this.printEvent();
+
+        
     }
 
     clearTable() {
