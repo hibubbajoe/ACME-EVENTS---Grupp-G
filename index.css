@@ -76,6 +76,17 @@ nav a:hover::after {
   visibility: visible;
 }
 
+#hud-item {
+  font-size: xx-large;
+  font-family: fjalla one;
+  padding-top: 50px;
+  text-align: center;
+  place-self: center;
+  position: relative;
+  color: #fef9ef;
+  background-color: #254441;
+}
+
 .grid-container main {
   font-family: fjalla one;
   grid-area: main-columns;
@@ -84,8 +95,8 @@ nav a:hover::after {
   display: grid;
   -ms-grid-columns: 1fr 2fr 1.5fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1.5fr 2fr 1fr;
-  -ms-grid-rows: 1fr 6fr 1fr;
-      grid-template-rows: 1fr 6fr 1fr;
+  -ms-grid-rows: 1fr 15fr 1fr;
+      grid-template-rows: 1fr 15fr 1fr;
       grid-template-areas: "header-text header-text header-text header-text header-text" "ett två tre fyra fem" "footer footer footer footer footer";
 }
 
