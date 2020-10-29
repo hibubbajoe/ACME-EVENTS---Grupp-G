@@ -23,8 +23,6 @@ class EventList {
         let add_form = document.getElementById("add_form");
         add_form.classList.toggle("hidden");
 
-        
-
         //tar bort klass hidden på deleteknapparna
         
         let delete_btns = document.querySelectorAll(".delete_btn");
@@ -163,13 +161,6 @@ class EventList {
                 edit_form.classList.toggle("hidden");
                 
             })
-            
-            
-            
-            
-
-        
-
     };
 
     //sparar array av eventobjekten i local storage 
@@ -316,6 +307,16 @@ class EventList {
 
         this.clearTable();
         this.printEvent();
+
+        let delete_btns = document.querySelectorAll(".delete_btn");
+        delete_btns.forEach(function(item){
+            console.log(item);
+            item.classList.remove("hidden");
+        })
+        let edit_btns = document.querySelectorAll(".edit_btn");
+        edit_btns.forEach(function(item){
+            item.classList.remove("hidden");
+        })
 
         
     }
