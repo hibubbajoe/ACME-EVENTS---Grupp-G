@@ -12,7 +12,7 @@ body {
       grid-template-rows: 2fr 1fr 8fr;
   -ms-grid-columns: 1fr 2fr 1fr;
       grid-template-columns: 1fr 2fr 1fr;
-      grid-template-areas: "nav nav nav" "left filter right" "left box right";
+      grid-template-areas: "nav nav nav" "left filter right" "left box right";
 }
 
 .grid-container nav {
@@ -130,7 +130,7 @@ main {
 }
 
 main .hidden {
-  display: none;
+  visibility: hidden;
 }
 
 main #event-list {
@@ -154,6 +154,14 @@ main #event-list .event-item td button {
   padding: 0.3rem;
   -webkit-box-shadow: 2px 2px black;
           box-shadow: 2px 2px black;
+}
+
+main #event-list .event-item td .delete_btn {
+  background-color: red;
+}
+
+main #event-list .event-item td .edit_btn {
+  background-color: green;
 }
 
 .cancelled {
