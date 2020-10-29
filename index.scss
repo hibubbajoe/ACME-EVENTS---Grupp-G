@@ -32,7 +32,7 @@ nav {
   .nav-buttons-wrapper {
     grid-area: button-column;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     grid-template-columns: "left right";
 
     .nav-button {
