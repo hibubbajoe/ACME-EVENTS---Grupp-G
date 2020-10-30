@@ -19,7 +19,7 @@ body {
 nav {
   grid-area: nav-columns; // namnet på dom grid-cellerna som elementet ska finnas på
   display: grid;
-  grid-template-columns: 2fr 7fr 3fr;
+  grid-template-columns: 2fr 5fr 4fr;
   grid-template-areas: "logo-column space button-column";
   background-color: $beige;
 
@@ -32,8 +32,8 @@ nav {
   .nav-buttons-wrapper {
     grid-area: button-column;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-columns: "left right";
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "left middle right";
 
     .nav-button {
       color: white;
@@ -77,6 +77,18 @@ nav {
   }
 }
 
+#hud-item {
+  font-size: xx-large;
+
+  font-family: fjalla one;
+  padding-top: 50px;
+  text-align: center;
+  place-self: center;
+  position: relative;
+  color: #fef9ef;
+  background-color: #254441;
+}
+
 .grid-container {
   //Kan va värt att dela upp det för att hela main ska ha en viss egenskap.. enklare att tänka uppdelat
   //om vi kör "left eventcolumn middle eventcolumn right , så kommer vi ända behöva fylla left,middle och right med någonting.
@@ -87,7 +99,7 @@ nav {
     background-color: $background-color;
     display: grid;
     grid-template-columns: 1fr 2fr 1.5fr 2fr 1fr;
-    grid-template-rows: 1fr 6fr 1fr;
+    grid-template-rows: 1fr 15fr 1fr;
 
     grid-template-areas:
       "header-text header-text header-text header-text header-text"

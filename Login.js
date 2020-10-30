@@ -1,44 +1,35 @@
-const admins = [
-  {
-    username: "shiho",
-    password: "1234",
-  },
-  {
-    username: "Robin",
-    password: "1234",
-  },
-  {
-    username: "Sara",
-    password: "1234",
-  },
-];
-
-document.addEventListener("DOMContentLoaded", () => {
-  if (localStorage.getItem("is_logged_in")) {
-    window.location.replace("../pages/admin.html");
+document.addEventListener("DOMContentLoaded", function (e) {
+  let button = document.getElementById("button");
+  if (button) {
+    button.addEventListener("click", function (e) {
+      let username = document.getElementById("username").value;
+      localStorage.setItem("username", username);
+      let password = document.getElementById("password").value;
+      localStorage.setItem("password", password);
+      console.log(localStorage);
+      window.location.assign("index.html");
+    });
   }
 
-  let button = document.getElementById("button");
-
-  button.addEventListener("click", (e) => {
-    e.preventDefault();
-    checkUser();
-  });
-
-  function checkUser() {
-    let input_username = document.getElementById("username").value;
-    let input_password = document.getElementById("password").value;
-
-    for (let i = 0; i < admins.length; i++) {
-      if (
-        input_username == admins[i].username &&
-        input_password == admins[i].password
-      ) {
-        localStorage.setItem("is_logged_in", "true");
-        window.location.href = "admin.html" + input_username;
-        return;
-      }
+  class LogIn {
+    //作り方？
+    //Constructor is a function that runs when creating the object.
+    constructor() {
+      //材料？ボックスを作る。
+      // Set variables for object.
+      this.question = document.getElementById("question");
+      this.choices = Array.from(document.getElementsByClassName("choice-text"));
+      this.questionCounterText = document.getElementById("questionCounter");
+      //ユーザーネームのインプットボックスを作り、IDの空欄部分の要素を得る。
+      //Create an variable for the user name input element
+      this.usernameText = document.getElementById("UsernameInpt");
+      //ローカルストレージからインプットされたユーザー名をHTML内に表示する。
+      //Display the user name input taken from the local storage in HTML.
+      this.usernameText.innerText = localStorage.getItem("username");
     }
-    button.classList.add("login-button");
+  }
+
+  if (document.getElementById("UsernameInpt")) {
+    let login = new LogIn();
   }
 });
