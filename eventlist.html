@@ -11,20 +11,22 @@
 </head>
 
 <body>
+    
     <div class="grid-container">
         <nav>
-           <a href="index.html">
-               <img src="jpeg/ACME-LOGO.png" alt="logo" class="logo">
-           </a>
+            <a href="index.html">
+                <img src="jpeg/ACME-LOGO.png" alt="logo" class="logo">
+            </a>
 
-           <div class="nav-buttons-wrapper">
-               <a href="aboutus.html" class="nav-button">About</a>
-               <a href="eventlist.html" class="nav-button">Events</a>
-           </div>
-       </nav>
+            <div class="nav-buttons-wrapper">
+                <a href="aboutus.html" class="nav-button">About</a>
+                <a href="eventlist.html" class="nav-button">Events</a>
+            </div>
+        </nav>
+        <button id="admin_btn">Admin</button>
 
         <div class="filter">
-            <div>
+            <div class="filter_sort_btns">
                 <select name="category-menu" id="category">
                     <option value="Category">Category</option>
                     <option value="Music">Music</option>
@@ -33,7 +35,7 @@
                     <option value="Stand Up">Stand Up</option>
                 </select>
             </div>
-            <div>
+            <div class="filter_sort_btns">
                 <select name="date-menu" id="date">
                     <option id="date-new">Sort by New</option>
                     <option id="date-old">Sort by Old</option>
@@ -44,7 +46,7 @@
             <table id="event-list">
                 <!--all events will be appended here-->
             </table>
-            <button id="admin_btn">Admin</button>
+            
             <!--add new event form-->
             <form class="hidden "id="add_form">
                 <p>Add Event:</p>

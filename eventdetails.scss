@@ -33,6 +33,8 @@ body {
     grid-template-columns: 2fr 7fr 3fr;
     grid-template-areas: "logo-column space button-column";
     background-color: $beige;
+    height: 200px;
+
 
     .logo {
       grid-area: logo-column;
@@ -61,6 +63,7 @@ body {
       color: black;
       text-decoration: none;
     }
+
     a {
       place-self: center;
       position: relative;
@@ -81,6 +84,7 @@ body {
       visibility: hidden;
       transition: 0.3s;
     }
+
     a:hover::after {
       bottom: -4px;
       opacity: 1;

@@ -6,31 +6,24 @@ body {
 
 nav {
   grid-area: nav-columns;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 2fr 5fr 4fr;
-      grid-template-columns: 2fr 5fr 4fr;
-      grid-template-areas: "logo-column space button-column";
+  grid-template-columns: 2fr 5fr 4fr;
+  grid-template-areas: "logo-column space button-column";
   background-color: #fef9ef;
+  height: 200px;
 }
 
 nav .logo {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: logo-column;
   max-height: 100px;
   padding: 30px;
 }
 
 nav .nav-buttons-wrapper {
-  -ms-grid-row: 1;
-  -ms-grid-column: 3;
   grid-area: button-column;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "left middle right";
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "left middle right";
 }
 
 nav .nav-buttons-wrapper .nav-button {
@@ -66,7 +59,6 @@ nav a::after {
   background: black;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -91,49 +83,33 @@ nav a:hover::after {
   font-family: fjalla one;
   grid-area: main-columns;
   background-color: #254441;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 2fr 1.5fr 2fr 1fr;
-      grid-template-columns: 1fr 2fr 1.5fr 2fr 1fr;
-  -ms-grid-rows: 1fr 15fr 1fr;
-      grid-template-rows: 1fr 15fr 1fr;
-      grid-template-areas: "header-text header-text header-text header-text header-text" "ett två tre fyra fem" "footer footer footer footer footer";
+  grid-template-columns: 1fr 2fr 1.5fr 2fr 1fr;
+  grid-template-rows: 1fr 15fr 1fr;
+  grid-template-areas: "header-text header-text header-text header-text header-text" "ett två tre fyra fem" "footer footer footer footer footer";
 }
 
 .grid-container main header {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
   grid-area: header-text;
   color: white;
   place-self: center;
 }
 
 .grid-container main .eventcolumn1 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 2;
   grid-area: två;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "top" "bottom";
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "top" "bottom";
   row-gap: 70px;
 }
 
 .grid-container main .eventcolumn1 #box1 {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
   grid-area: top;
-  display: -ms-grid;
   display: grid;
   width: 500px;
   height: 500px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .grid-container main .eventcolumn1 #box1 img {
@@ -143,16 +119,10 @@ nav a:hover::after {
 }
 
 .grid-container main .eventcolumn1 #box2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 1;
   grid-area: bottom;
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   width: 500px;
   height: 500px;
 }
@@ -164,25 +134,17 @@ nav a:hover::after {
 }
 
 .grid-container main .eventcolumn2 {
-  -ms-grid-row: 2;
-  -ms-grid-column: 4;
   grid-area: fyra;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr 1fr;
-      grid-template-rows: 1fr 1fr;
-      grid-template-areas: "top" "bottom";
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "top" "bottom";
   row-gap: 70px;
 }
 
 .grid-container main .eventcolumn2 #box3 {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   width: 500px;
   height: 500px;
 }
@@ -194,13 +156,9 @@ nav a:hover::after {
 }
 
 .grid-container main .eventcolumn2 #box4 {
-  display: -ms-grid;
   display: grid;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  justify-content: center;
+  align-content: center;
   width: 500px;
   height: 500px;
 }
@@ -212,11 +170,7 @@ nav a:hover::after {
 }
 
 .grid-container main footer {
-  -ms-grid-row: 3;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 5;
   grid-area: footer;
-  display: -ms-grid;
   display: grid;
 }
 
@@ -239,7 +193,6 @@ nav a:hover::after {
   background: #fef9ef;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -272,7 +225,6 @@ nav a:hover::after {
   opacity: 0;
   /* マスクを表示しない */
   background-color: rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
@@ -306,7 +258,6 @@ nav a:hover::after {
   opacity: 0;
   /* マスクを表示しない */
   background-color: rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
@@ -340,7 +291,6 @@ nav a:hover::after {
   opacity: 0;
   /* マスクを表示しない */
   background-color: rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
@@ -374,7 +324,6 @@ nav a:hover::after {
   opacity: 0;
   /* マスクを表示しない */
   background-color: rgba(0, 0, 0, 0.4);
-  -webkit-transition: all 0.6s ease;
   transition: all 0.6s ease;
 }
 
@@ -384,4 +333,3 @@ nav a:hover::after {
   padding-top: 250px;
   /* ホバーで下にずらす */
 }
-/*# sourceMappingURL=index.css.map */

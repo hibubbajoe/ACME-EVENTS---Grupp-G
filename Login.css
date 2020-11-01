@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Fjalla One&display=swap");
-
 * {
   font-family: "Fjalla one";
+}
+
+body {
+  margin: 0;
 }
 
 body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 100vh;
 }
 
 nav {
@@ -18,20 +22,21 @@ nav {
   grid-template-areas: "logo-column space button-column";
   background-color: #fef9ef;
 }
-.logo {
+
+nav .logo {
   grid-area: logo-column;
   max-height: 100px;
   padding: 30px;
 }
 
-.nav-buttons-wrapper {
+nav .nav-buttons-wrapper {
   grid-area: button-column;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-columns: "left right";
 }
 
-.nav-button {
+nav .nav-buttons-wrapper .nav-button {
   color: white;
   place-self: center;
   background-color: transparent;
@@ -41,11 +46,12 @@ nav {
   font-size: 30px;
 }
 
-a:link {
+nav a:link {
   color: black;
   text-decoration: none;
 }
-a {
+
+nav a {
   place-self: center;
   position: relative;
   display: inline-block;
@@ -53,7 +59,7 @@ a {
   color: black;
 }
 
-a::after {
+nav a::after {
   position: absolute;
   bottom: 2px;
   left: 0;
@@ -65,7 +71,8 @@ a::after {
   visibility: hidden;
   transition: 0.3s;
 }
-a:hover::after {
+
+nav a:hover::after {
   bottom: -4px;
   opacity: 1;
   visibility: visible;
@@ -73,7 +80,7 @@ a:hover::after {
 
 .container {
   height: 88vh;
-  background: #254441;
+  background: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -88,8 +95,8 @@ a:hover::after {
   width: 40vh;
   min-height: 400px;
   min-width: 400px;
-  background: #ffcb77;
-  box-shadow: 0 6px 40px 0 rgb(0, 0, 0, 0.1);
+  background: #ffffff;
+  box-shadow: 0 6px 40px 0 RGB(0, 0, 0, 0.1);
   border-radius: 10px;
   position: relative;
 }
@@ -97,6 +104,7 @@ a:hover::after {
 .form h1 {
   margin-bottom: 1em;
 }
+
 .form input {
   width: 80%;
   padding: 1em;

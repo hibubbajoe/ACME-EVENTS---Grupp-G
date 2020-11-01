@@ -14,6 +14,7 @@ $beige: #fef9ef;
 body {
   margin: 0;
 }
+
 //Navbar är egen grid nu
 
 nav {
@@ -22,6 +23,7 @@ nav {
   grid-template-columns: 2fr 5fr 4fr;
   grid-template-areas: "logo-column space button-column";
   background-color: $beige;
+  height: 200px;
 
   .logo {
     grid-area: logo-column;
@@ -50,6 +52,7 @@ nav {
     color: black;
     text-decoration: none;
   }
+
   a {
     place-self: center;
     position: relative;
@@ -70,6 +73,7 @@ nav {
     visibility: hidden;
     transition: 0.3s;
   }
+
   a:hover::after {
     bottom: -4px;
     opacity: 1;
@@ -90,9 +94,6 @@ nav {
 }
 
 .grid-container {
-  //Kan va värt att dela upp det för att hela main ska ha en viss egenskap.. enklare att tänka uppdelat
-  //om vi kör "left eventcolumn middle eventcolumn right , så kommer vi ända behöva fylla left,middle och right med någonting.
-
   main {
     font-family: fjalla one;
     grid-area: main-columns; // namnet på dom grid-cellerna som elementet ska finnas på

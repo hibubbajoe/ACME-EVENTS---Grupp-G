@@ -20,7 +20,6 @@ nav {
   grid-template-columns: 2fr 7fr 3fr;
   grid-template-areas: "logo-column space button-column";
   background-color: #fef9ef;
-  height: 200px;
 }
 
 nav .logo {
