@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <div class="grid-container">
         <nav>
             <a href="index.html">
@@ -46,34 +46,40 @@
             <table id="event-list">
                 <!--all events will be appended here-->
             </table>
-            
+
             <!--add new event form-->
-            <form class="hidden "id="add_form">
+            <form class="hidden " id="add_form">
                 <p>Add Event:</p>
-                <input placeholder="Date"id="event_date" type="date">
-                <input placeholder="Name of event" id="name"type="text">
-                <input placeholder="Location" id="location"type="text">
+                <input placeholder="Date" id="event_date" type="date">
+                <input placeholder="Name of event" id="name" type="text">
+                <input placeholder="Location" id="location" type="text">
                 <select id="event_category">
                     <option value="Music">Music</option>
                     <option value="Sport">Sport</option>
                     <option value="Stand Up">Stand Up</option>
                 </select>
-                <input placeholder="Avaliable"id="isAvaliable"type="text">
-                <button type="button"id="create_btn">Add</button>
+                <select id="add_isAvaliable">
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                </select>
+                <button type="button" id="create_btn">Add</button>
             </form>
             <!--edit event form-->
-            <form class=" hidden"id="edit_form">
+            <form class=" hidden" id="edit_form">
                 <p>Edit Event:</p>
-                <input placeholder="Date"id="edit_date" type="date">
-                <input placeholder="Name of event" id="edit_name"type="text">
-                <input placeholder="Location" id="edit_location"type="text">
-                <select id="edit_event_category"> 
+                <input placeholder="Date" id="edit_date" type="date">
+                <input placeholder="Name of event" id="edit_name" type="text">
+                <input placeholder="Location" id="edit_location" type="text">
+                <select id="edit_event_category">
                     <option value="Music">Music</option>
                     <option value="Sport">Sport</option>
                     <option value="Stand Up">Stand Up</option>
                 </select>
-                <input placeholder="Avaliable"id="edit_isAvaliable"type="text">
-                <button type="button"id="save_btn">Save</button>
+                <select id="edit_isAvaliable">
+                    <option value="Available">Available</option>
+                    <option value="Unavailable">Unavailable</option>
+                </select>
+                <button type="button" id="save_btn">Save</button>
             </form>
         </main>
     </div>

@@ -50,7 +50,8 @@ class EventList {
         let name_input = document.getElementById("name");
         let location_input = document.getElementById("location");
         let category_input = document.getElementById("event_category");
-        let isAvaliable_input = document.getElementById("isAvaliable");
+        let isAvaliable_input = document.getElementById("add_isAvaliable");
+        
         // create a new event object from the users inputs
             let date = date_input.value;
             let name = name_input.value;
@@ -195,7 +196,7 @@ class EventList {
 
                 // if true the event will have a "more info button" if false there will be a "cancelled" text
                 // TODO: fix this bugg in the admin form: right now it will always be true if there is any input and false if there is no input
-                if (!event.isAvaliable) {
+                if (event.isAvaliable === "Unavailable") {
                     td_avaliable.innerText = "cancelled"
                     td_avaliable.classList.add("cancelled");
                     row.append(td_avaliable);
@@ -315,10 +316,10 @@ class Event {
 
 // Some events are on the page when its loaded:
 
-let event1 = new Event("2020-06-03", "Anthony Jeselnik", "Civic Auditorium", "Stand Up", false)
-let event2 = new Event("2020-07-01", "James Blake", "L'Olympia", "Music", true)
-let event3 = new Event("2020-08-13", "Nina Simone", "Fasching", "Music", false)
-let event4 = new Event("2020-08-17", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
+let event1 = new Event("2020-06-03", "Anthony Jeselnik", "Civic Auditorium", "Stand Up", "Unavailable")
+let event2 = new Event("2020-07-01", "James Blake", "L'Olympia", "Music", "Available")
+let event3 = new Event("2020-08-13", "Nina Simone", "Fasching", "Music", "Unavailable")
+let event4 = new Event("2020-08-17", "PSG vs Milan", "Le Parc des Princes", "Sport", "Unavailable")
 
 
 let eventlist = new EventList;
