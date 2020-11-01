@@ -12,20 +12,21 @@
 
 <body>
     <div class="grid-container">
+        <button id="admin_btn">Admin</button>
         <!--Navbar ligger utanför grid för att kunna återanvändas nu-->
         <nav>
-           <a href="index.html">
-               <img src="jpeg/ACME-LOGO.png" alt="logo" class="logo">
-           </a>
+            <a href="index.html">
+                <img src="jpeg/ACME-LOGO.png" alt="logo" class="logo">
+            </a>
 
-           <div class="nav-buttons-wrapper">
-               <a href="aboutus.html" class="nav-button">About</a>
-               <a href="eventlist.html" class="nav-button">Events</a>
-           </div>
-       </nav>
+            <div class="nav-buttons-wrapper">
+                <a href="aboutus.html" class="nav-button">About</a>
+                <a href="eventlist.html" class="nav-button">Events</a>
+            </div>
+        </nav>
 
         <div class="filter">
-            <div>
+            <div class="filter_sort_btns">
                 <select name="category-menu" id="category">
                     <option value="Category">Category</option>
                     <option value="Music">Music</option>
@@ -34,7 +35,7 @@
                     <option value="Stand Up">Stand Up</option>
                 </select>
             </div>
-            <div>
+            <div class="filter_sort_btns">
                 <select name="date-menu" id="date">
 
                     <!--<button id="date-button">Sort By Date</button>-->
@@ -45,27 +46,30 @@
         </div>
         <main>
             <table id="event-list">
-    
+
             </table>
-            <button id="admin_btn">Admin</button>
-            <form class="hidden"id="add_form">
-                <input placeholder="Date"id="event_date" type="text">
-                <input placeholder="Name of event" id="name"type="text">
-                <input placeholder="Location" id="location"type="text">
-                <input placeholder="Category" id="event_category"type="text">
-                <input placeholder="Avaliable"id="isAvaliable"type="text">
-                <button type="button"id="create_btn">Add</button>
+            <form class="hidden" id="add_form">
+                <input placeholder="Date" id="event_date" type="text">
+                <input placeholder="Name of event" id="name" type="text">
+                <input placeholder="Location" id="location" type="text">
+                <input placeholder="Category" id="event_category" type="text">
+                <input placeholder="Avaliable" id="isAvaliable" type="text">
+                <button type="button" id="create_btn">Add</button>
             </form>
-            <form class="hidden"id="edit_form">
-                <input placeholder="Date"id="edit_date" type="text">
-                <input placeholder="Name of event" id="edit_name"type="text">
-                <input placeholder="Location" id="edit_location"type="text">
-                <input placeholder="Category" id="edit_event_category"type="text">
-                <input placeholder="Avaliable"id="edit_isAvaliable"type="text">
-                <button type="button"id="save_btn">Save</button>
+            <form class="hidden" id="edit_form">
+                <input placeholder="Date" id="edit_date" type="text">
+                <input placeholder="Name of event" id="edit_name" type="text">
+                <input placeholder="Location" id="edit_location" type="text">
+                <input placeholder="Category" id="edit_event_category" type="text">
+                <input placeholder="Avaliable" id="edit_isAvaliable" type="text">
+                <button type="button" id="save_btn">Save</button>
             </form>
         </main>
 
+        <footer>
+
+
+        </footer>
 
         <!--TODO:
 

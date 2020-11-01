@@ -31,6 +31,7 @@ nav {
   grid-template-columns: 2fr 7fr 3fr;
   grid-template-areas: "logo-column space button-column";
   background-color: $beige;
+  height: 200px;
 
   .logo {
     grid-area: logo-column;
@@ -59,6 +60,7 @@ nav {
     color: black;
     text-decoration: none;
   }
+
   a {
     place-self: center;
     position: relative;
@@ -79,6 +81,7 @@ nav {
     visibility: hidden;
     transition: 0.3s;
   }
+
   a:hover::after {
     bottom: -4px;
     opacity: 1;
@@ -112,17 +115,22 @@ nav {
 
   0% {
     opacity: 0;
-  } /*アニメーション開始時は不透明度0%*/
+  }
+
+  /*アニメーション開始時は不透明度0%*/
 
   100% {
     opacity: 1;
-  } /*アニメーション終了時は不透明度100%*/
+  }
+
+  /*アニメーション終了時は不透明度100%*/
 }
 
 .wrapper p {
   font-size: 1.4em;
   text-indent: 1em;
 }
+
 .wrapper {
   margin: 50px 70px 80px 70px;
 }
@@ -148,10 +156,12 @@ nav {
   margin: 20px auto 0;
   transition-duration: 0.5s;
 }
+
 .img_wrap img {
   width: 100%;
   cursor: pointer;
 }
+
 .img_wrap:hover {
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
   transform: translateY(-10px);
@@ -188,6 +198,7 @@ nav {
     }
   }
 }
+
 .detale ul {
   display: inline-flex;
   margin: 50px;

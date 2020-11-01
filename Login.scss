@@ -60,6 +60,7 @@ nav {
     color: black;
     text-decoration: none;
   }
+
   a {
     place-self: center;
     position: relative;
@@ -80,6 +81,7 @@ nav {
     visibility: hidden;
     transition: 0.3s;
   }
+
   a:hover::after {
     bottom: -4px;
     opacity: 1;
@@ -113,6 +115,7 @@ nav {
 .form h1 {
   margin-bottom: 1em;
 }
+
 .form input {
   width: 80%;
   padding: 1em;
