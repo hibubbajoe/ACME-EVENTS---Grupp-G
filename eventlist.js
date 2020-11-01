@@ -33,7 +33,9 @@ class EventList {
         let edit_btns = document.querySelectorAll(".edit_btn");
         edit_btns.forEach(function(item){
             item.classList.toggle("hidden");
-        })    
+        })  
+        //disable sort function when inside admin, to avoid bugg.
+        this.sort_btn.disabled = !this.sort_btn.disabled;  
     }
     
     // TODO:
