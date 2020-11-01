@@ -65,12 +65,9 @@ class EventList {
             // this code below is repeated many times so it will be moved to its own method later. 
             let delete_btns = document.querySelectorAll(".delete_btn");
             delete_btns.forEach(function(item){
-            console.log(item);
             item.classList.toggle("hidden");
-
             let edit_btns = document.querySelectorAll(".edit_btn");
             edit_btns.forEach(function(item){
-            console.log(item);
             item.classList.remove("hidden");
             })
         })
@@ -93,7 +90,6 @@ class EventList {
 
         let delete_btns = document.querySelectorAll(".delete_btn");
         delete_btns.forEach(function(item){
-            console.log(item);
             item.classList.toggle("hidden");
         })
         let edit_btns = document.querySelectorAll(".edit_btn");
@@ -317,11 +313,11 @@ class Event {
 
 // Some events are on the page when its loaded:
 
-let event1 = new Event("July 3, 22:00", "Anthony Jeselnik", "Civic Auditorium", "Stand Up", false)
-let event2 = new Event("July 7, 20:00", "James Blake", "L'Olympia", "Music", true)
-let event3 = new Event("August 13, 23:00", "Nina Simone", "Fasching", "Music", false)
-let event4 = new Event("August 17, 13:00", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
-let event5 = new Event("August 17, 13:00", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
+let event1 = new Event("2020-06-03", "Anthony Jeselnik", "Civic Auditorium", "Stand Up", false)
+let event2 = new Event("2020-07-01", "James Blake", "L'Olympia", "Music", true)
+let event3 = new Event("2020-08-13", "Nina Simone", "Fasching", "Music", false)
+let event4 = new Event("2020-08-17", "PSG vs Milan", "Le Parc des Princes", "Sport", false)
+
 
 let eventlist = new EventList;
 

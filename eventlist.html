@@ -12,7 +12,6 @@
 
 <body>
     <div class="grid-container">
-        <!--Navbar ligger utanför grid för att kunna återanvändas nu-->
         <nav>
            <a href="index.html">
                <img src="jpeg/ACME-LOGO.png" alt="logo" class="logo">
@@ -36,8 +35,6 @@
             </div>
             <div>
                 <select name="date-menu" id="date">
-
-                    <!--<button id="date-button">Sort By Date</button>-->
                     <option id="date-new">Sort by New</option>
                     <option id="date-old">Sort by Old</option>
                 </select>
@@ -45,60 +42,38 @@
         </div>
         <main>
             <table id="event-list">
-    
+                <!--all events will be appended here-->
             </table>
             <button id="admin_btn">Admin</button>
-            <form class="hidden"id="add_form">
-                <input placeholder="Date"id="event_date" type="text">
+            <!--add new event form-->
+            <form class="hidden admin_form"id="add_form">
+                <input placeholder="Date"id="event_date" type="date">
                 <input placeholder="Name of event" id="name"type="text">
                 <input placeholder="Location" id="location"type="text">
-                <input placeholder="Category" id="event_category"type="text">
+                <select id="event_category">
+                    <option value="Music">Music</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Stand Up">Stand Up</option>
+                </select>
                 <input placeholder="Avaliable"id="isAvaliable"type="text">
                 <button type="button"id="create_btn">Add</button>
             </form>
-            <form class="hidden"id="edit_form">
-                <input placeholder="Date"id="edit_date" type="text">
+            <!--edit event form-->
+            <form class="admin_form hidden"id="edit_form">
+                <input placeholder="Date"id="edit_date" type="date">
                 <input placeholder="Name of event" id="edit_name"type="text">
                 <input placeholder="Location" id="edit_location"type="text">
-                <input placeholder="Category" id="edit_event_category"type="text">
+                <select id="edit_event_category"> 
+                    <option value="Music">Music</option>
+                    <option value="Sport">Sport</option>
+                    <option value="Stand Up">Stand Up</option>
+                </select>
                 <input placeholder="Avaliable"id="edit_isAvaliable"type="text">
                 <button type="button"id="save_btn">Save</button>
             </form>
         </main>
-
-
-        <!--TODO:
-
-   -  skapa  inga event i html. 
-    När sidan laddat ska eventobjekten skapas med js och visas i lista-boxen.
-    Alltså det finns några “färdiga objekt” från början som läggs sedan till i listan på sidan när den laddats. Samt sparas i local storage som JSON.
----------------------------------------
-    (När man CRUDAR nya events sen ska de kunna använda sig av samma klass. )
---------------------------------------
-    class Event 
-    constructor(datum, namn, plats, kategori, isAvaliable)
-    datum = this.datum
-    namn = this.namn
-    plats = this.plats
-    kategori= this.kategori
-    isAvaliable = this.isAvaliable
-
-    metod som skriver ut objektet i listan
-    metod som gör om objekt till JSON och  sparar data i local storage 
------------------------------------------
-
-    class eventList
-
-    metod som filtrarar ut en kategori som väljs av användaren i dropdownmenyn. 
-    metod som sorterar alla eventobjekt efter datum när användaren trycker på en knapp. 
-----------------------------------------
-
-    Det behöv en adminknapp
-    Här ska det finnas ett formulär som endast visas när man trycker på admin. 
-    Med detta kan man CRUDA nya evenemang till tablet-->
     </div>
     <script src="eventlist.js"></script>
-    <!--<script src="admin.js"></script>-->
 </body>
 
 </html>
